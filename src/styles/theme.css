@@ -1,0 +1,32 @@
+:root {
+    --accent: #000000;
+    --accent-hover: #000000;
+    --bg-color: #1A1A2E;        /* Глубокий сине-чёрный фон */
+    --bg-section: #787878;      /* Тёмные карточки */
+    --bg-card: #0F3460;         /* Карточки */
+    --text-color: #000000;      /* Светлый текст */
+    --border-color: #000000;
+    --border-radius: 10px;
+
+    --spacing-sm: 5px;
+    --spacing-md: 10px;
+    --spacing-lg: 15px;
+    --spacing-xl: 30px;
+
+    --font-main: "Inter", sans-serif;
+    --font-size: clamp(18px, 1.1vw, 24px);
+
+    --icon-size-sm: 18px;
+    --icon-size-md: 22px;
+    --icon-size-lg: 24px;
+
+    --transition: 300ms ease;
+}
+
+
+
+/* @media (min-width: 1560px) {
+    :root {
+        --font-size: 24px;
+    }
+} */

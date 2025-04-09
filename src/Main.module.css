@@ -1,0 +1,49 @@
+/* Main.module.css */
+.mainSection {
+  width: 100%;
+  height: 100vh;
+}
+
+.title {
+  padding: var(--spacing-sm) 0 0 0;
+  text-align: center;
+}
+.mainBlock {
+  margin-top: var(--spacing-lg);
+  width: 100%;
+  height: 80.55%;
+  max-height: 870px;
+  display: flex;
+  justify-content: space-between;
+  gap: 75px;
+}
+
+.cardColumn {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (max-width: 1330px) {
+  .mainBlock {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+    max-height: none;
+    height: 100%;
+    width: 100%;
+    margin-top: var(--spacing-xl);
+  }
+  .cardColumn {
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    order: 1;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 15px;
+  }
+};
+
