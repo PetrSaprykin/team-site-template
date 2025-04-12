@@ -1,0 +1,12 @@
+.sliderContainer {
+    display: flex;
+    order: 1;
+    align-items: center;
+    max-width: 450px;
+    width: 100%;
+}
+
+
+.button {
+    margin: 0 5px;
+}

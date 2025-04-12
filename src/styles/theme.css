@@ -1,32 +1,72 @@
 :root {
-    --accent: #000000;
-    --accent-hover: #000000;
-    --bg-color: #1A1A2E;        /* Глубокий сине-чёрный фон */
-    --bg-section: #787878;      /* Тёмные карточки */
-    --bg-card: #0F3460;         /* Карточки */
-    --text-color: #000000;      /* Светлый текст */
-    --border-color: #000000;
+    --primary-dark: rgba(224, 227, 231, 0.8);
+    --primary-light: #e7e6e6;
+    --accent-blue: #0062ff;
+    --bg-color: #121a24;    
+    --bg-section: rgba(160, 194, 250, 0.15);
+    --bg-card: rgba(26, 32, 44, 0.655);
+    --border: 1px solid rgba(255, 255, 255, 0.156);
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    --filter: saturate(80%);
+
     --border-radius: 10px;
 
+    --spacing-xs: 3px;
     --spacing-sm: 5px;
     --spacing-md: 10px;
     --spacing-lg: 15px;
     --spacing-xl: 30px;
 
     --font-main: "Inter", sans-serif;
-    --font-size: clamp(18px, 1.1vw, 24px);
+    --font-size: 16px;
 
     --icon-size-sm: 18px;
     --icon-size-md: 22px;
     --icon-size-lg: 24px;
 
-    --transition: 300ms ease;
+    --transition: all 0.3s ease;
 }
 
 
 
-/* @media (min-width: 1560px) {
+@media (max-width: 2560px) {
     :root {
-        --font-size: 24px;
+        --font-size: 22px;
     }
-} */
+}
+
+@media (max-width: 1920px) {
+    :root {
+        --font-size: 20px;
+    }
+}
+
+@media (max-width: 1591px) {
+    :root { 
+        --font-size: 18px;
+    }
+}
+
+@media (max-width: 1280px) {
+    :root {
+        --font-size: 16px;
+    }
+}
+
+@media (max-width: 615px) {
+    :root {
+        --font-size: 14px;
+    }
+}
+
+@media (max-width: 445px) {
+    :root {
+        --font-size: 13px;
+    }
+}
+
+@media (max-width: 380px) {
+    :root {
+        --font-size: 12px;
+    }
+}

@@ -1,88 +1,193 @@
 /* InfoBlock.module.css */
-@import url('https://fonts.googleapis.com/css2?family=Turret+Road:wght@400;500&display=swap');
 .container {
-  max-width: 70%;
-  width: 100%;
-  height: 100%;
-  padding: 0px;
-  display: grid;
-  gap: 0;
-  grid-template-columns: auto 1fr;
-  padding: var(--spacing-md);
-  border-radius: var(--border-radius);
-  background-color: var(--bg-section);
+    max-width: 900px;
+    width: 100%;
+    min-height: 100%;
+    max-height: fit-content;
+    padding: 0px;
+    display: flex;
+    flex: 1 0;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    background-color: var(--bg-section);
+    backdrop-filter: var(--filter);
+    border: var(--border);
 }
 
-/* Секция с фото */
 .photoSection {
-  max-width: 256px;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  box-sizing: border-box;
+    max-width: 256px;
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-lg);
 }
 
 .photoPlaceholder {
-  margin-bottom: var(--spacing-lg);
-  border-radius: var(--border-radius);
-  
+    background-color: var(--bg-card);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
 }
 
 .photoPlaceholder img {
-  border: 3px solid var(--border-color);
-  border-radius: var(--border-radius);
+    border: var(--border);
+    border-radius: var(--border-radius);
 }
 
 .stackBlock {
-  flex-grow: 1;
-  background-color: var(--bg-card);
-  border-radius: var(--border-radius);
-  min-height: 100px;
-  padding: var(--spacing-md);
-  text-align: justify;
+    flex-grow: 1;
+    min-height: 100px;
+    text-align: justify;
+    background: var(--bg-card);
+    box-shadow: var(--shadow);
+    backdrop-filter: var(--filter);
+    border: var(--border);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-md);
 }
 
-/* Секция с контентом */
 .contentSection {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  margin-left: var(--spacing-lg);
-  gap: var(--spacing-lg);
+    display: flex;
+    flex-direction: column;
+    min-width: 310px;
+    height: 100%;
+    gap: var(--spacing-lg);
 }
 
 .title {
-  font-size: 34px;
-  font-weight: 600;
-  color: var(--text-color);
+    font-weight: 600;
+    color: var(--text-color);
 }
 
 .contactsBlock {
-  background-color: var(--bg-card);
-  padding: calc(var(--spacing-md) - 3px) var(--spacing-md);
-  border-radius: var(--border-radius);
+    padding: calc(var(--spacing-md) - 5px) var(--spacing-md);
+    background: var(--bg-card);
+    backdrop-filter: var(--filter);
+    box-shadow: var(--shadow);
+    border-radius: var(--border-radius);
+    border: var(--border);
 }
 
 .contactItem {
-  margin: 3px 0;
+    display: flex;
+    align-items: center;
+}
+
+.contactItem {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.contactIcon {
+    width: 22px;
+}
+
+.contactItem a {
+    padding-bottom: 5px;
+    white-space: nowrap; /* Запрет переноса строк */
+    overflow: hidden; /* Скрытие выходящего за границы текста */
+    text-overflow: ellipsis; /* Добавление "..." */
+}
+.contactItem span {
+    color: var(--primary-light);
+    padding: 0 3px 5px 0;
 }
 
 .textBlock {
-  background-color: var(--bg-card);
-  padding: var(--spacing-md);
-  border-radius: var(--border-radius);
-  flex-grow: 1; /* Растягивается на всю доступную высоту */
+    flex-grow: 1;
+    padding: var(--spacing-md);
+    background: var(--bg-card);
+    backdrop-filter: var(--filter);
+    box-shadow: var(--shadow);
+    border: var(--border);
+    border-radius: var(--border-radius);
 }
 
 .contentText {
-  line-height: 1.4;
-  margin: 0;
+    font-size: var(--font-size);
+    line-height: 1.35;
+    margin: 0;
+}
+
+.backButton {
+    width: 35px;
+    margin: 10px 0;
+    display: none;
 }
 
 
-@media (max-width:1330px) {
-  .container {
-    max-width: 100%;
-    height: auto;
-  }
+@media (max-width: 1280px) {
+    .photoSection {
+        width: 180px;
+    }
+    .contentSection {
+        min-width: 280px;
+    }
+    .contactIcon {
+        width: 20px;
+    }
+}
+
+@media (max-width: 960px) {
+    .photoSection {
+        width: 150px;
+        gap: var(--spacing-md);
+    }
+    .contentSection {
+        min-width: 230px;
+        gap: var(--spacing-md);
+    }
+    .container {
+        gap: var(--spacing-md);
+        padding: calc(var(--spacing-sm) + 2px);
+    }
+    .contactIcon {
+        width: 18px;
+    }
+}
+
+@media (max-width: 615px) {
+    .contactIcon {
+        width: 16px;
+    }
+    .contactsBlock {
+        padding: var(--spacing-xs) var(--spacing-sm);
+    }
+    .stackBlock {
+        padding: var(--spacing-sm);
+    }
+    .textBlock {
+        padding: var(--spacing-sm);
+    }
+}
+
+@media (max-width: 560px) {
+    .backButton {
+        display: block;
+    }
+}
+
+@media (max-width: 445px) {
+    .photoSection {
+        width: 135px;
+    }
+    .contentSection {
+        min-width: auto;
+    }
+    .contactIcon {
+        width: 14px;
+    }
+}
+
+@media (max-width: 380px) {
+    .photoSection {
+        width: 110px;
+        gap: var(--spacing-sm);
+    }
+    .contentSection {
+        gap: var(--spacing-sm);
+    }
 }
