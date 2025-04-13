@@ -5,7 +5,16 @@ import styles from './PersonCard.module.css'
 
 export default function PersonCard(props) {
     return (
-        <div class={styles.card} onClick={() => props.onSend(props.user)}>
+        <div
+            classList={{
+                [styles.card]: true,
+                [styles.selectedCard]: props.isSelected,
+            }}
+            onClick={() => {
+                props.onSelect(props.user)
+                props.onSend(props.user)
+            }}
+        >
             <span class={styles.selectTag}>
                 <FaSolidAngleRight size={25} />
             </span>
@@ -27,10 +36,7 @@ export default function PersonCard(props) {
                     &nbsp;
                     <span>{props.user.name[2]}</span>
                 </h4>
-                <div class={styles.textBlock}>
-                    <p>{props.user?.contacts?.email}</p>
-                    <span class={styles.role}>{props.user?.role}</span>
-                </div>
+                <span class={styles.role}>{props.user?.role}</span>
             </div>
         </div>
     )

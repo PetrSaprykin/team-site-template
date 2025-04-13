@@ -18,6 +18,7 @@
     --spacing-xl: 30px;
 
     --font-main: "Inter", sans-serif;
+    --font-code: 'Consolas', monospace;
     --font-size: 16px;
 
     --icon-size-sm: 18px;
@@ -41,7 +42,7 @@
     }
 }
 
-@media (max-width: 1591px) {
+@media (max-width: 1595px) {
     :root { 
         --font-size: 18px;
     }
@@ -59,14 +60,8 @@
     }
 }
 
-@media (max-width: 445px) {
+@media (max-width: 470px) {
     :root {
         --font-size: 13px;
-    }
-}
-
-@media (max-width: 380px) {
-    :root {
-        --font-size: 12px;
     }
 }

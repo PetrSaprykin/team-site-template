@@ -1,13 +1,14 @@
 /* InfoBlock.module.css */
+
+/* в контактах первая строка - телефон почта
+вторая - тг гитхаб
+сайт в отдельном микро-блоке */
 .container {
     max-width: 900px;
     width: 100%;
-    min-height: 100%;
-    max-height: fit-content;
-    padding: 0px;
     display: flex;
-    flex: 1 0;
-    gap: var(--spacing-lg);
+    flex-direction: column;
+    gap: var(--spacing-md);
     padding: var(--spacing-md);
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
@@ -16,44 +17,91 @@
     border: var(--border);
 }
 
+.sections {
+    gap: var(--spacing-lg);
+    display: flex;
+    flex-grow: 1;
+    max-height: 440px;
+}
+
+.block {
+    background: var(--bg-card);
+    backdrop-filter: var(--filter);
+    border: var(--border);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.homeButton {
+    width: 30px;
+    position: absolute;
+    display: none;
+    top: var(--spacing-lg);
+    right: var(--spacing-lg);
+}
+
 .photoSection {
     max-width: 256px;
     display: flex;
     flex-shrink: 0;
     flex-direction: column;
     align-items: center;
-    gap: var(--spacing-lg);
-}
-
-.photoPlaceholder {
-    background-color: var(--bg-card);
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
+    height: 100%;
+    position: relative;
+    gap: var(--spacing-md);
 }
 
 .photoPlaceholder img {
-    border: var(--border);
     border-radius: var(--border-radius);
 }
 
-.stackBlock {
+.skillsBlock {
     flex-grow: 1;
-    min-height: 100px;
-    text-align: justify;
+    height: 100%;
+    overflow-y: auto;
+    padding: calc(var(--spacing-sm) + 3px);
+}
+
+.skillsList {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+}
+
+.skillsList li {
+    font-family: var(--font-code);
+    height: min-content;
+    width: min-content;
+    padding: var(--spacing-xs) var(--spacing-sm);
     background: var(--bg-card);
-    box-shadow: var(--shadow);
-    backdrop-filter: var(--filter);
-    border: var(--border);
-    border-radius: var(--border-radius);
-    padding: var(--spacing-md);
+    border-radius: calc(var(--border-radius) * 0.5);
+    color: var(--accent-blue);
+}
+
+.skillsBlock::-webkit-scrollbar {
+    width: 0;
+}
+
+.sliderBlock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: var(--spacing-sm) 0;
+}
+
+.horizontalSliderBlock {
+    flex-shrink: 0;
+    height: 75px;
 }
 
 .contentSection {
     display: flex;
     flex-direction: column;
     min-width: 310px;
-    height: 100%;
-    gap: var(--spacing-lg);
+    min-height: 100%;
+    gap: var(--spacing-md);
 }
 
 .title {
@@ -61,102 +109,136 @@
     color: var(--text-color);
 }
 
-.contactsBlock {
-    padding: calc(var(--spacing-md) - 5px) var(--spacing-md);
+.linksBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: calc(var(--spacing-sm) + 3px);
     background: var(--bg-card);
     backdrop-filter: var(--filter);
-    box-shadow: var(--shadow);
-    border-radius: var(--border-radius);
     border: var(--border);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
 }
 
-.contactItem {
+.linksRow {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
 }
 
-.contactItem {
+.linkItem {
     display: flex;
     align-items: center;
     gap: 3px;
+    padding: var(--spacing-xs) calc(var(--spacing-sm) + 2px);
+    background: var(--bg-card);
+    border-radius: calc(var(--border-radius) * 0.5);
 }
 
 .contactIcon {
-    width: 22px;
+    width: 20px;
 }
 
-.contactItem a {
-    padding-bottom: 5px;
-    white-space: nowrap; /* Запрет переноса строк */
-    overflow: hidden; /* Скрытие выходящего за границы текста */
-    text-overflow: ellipsis; /* Добавление "..." */
+.linkItem a {
+    margin-bottom: 3px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--accent-blue);
 }
-.contactItem span {
+
+.linkItem span {
     color: var(--primary-light);
-    padding: 0 3px 5px 0;
+    margin: 0 0 3px 0;
 }
+
+.siteLinkRow {
+    padding: var(--spacing-xs) calc(var(--spacing-sm) + 3px);
+}
+
+.siteLinkRow a {
+    line-height: 1.8;
+    font-family: var(--font-code);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    background: var(--bg-card);
+    border-radius: calc(var(--border-radius) * 0.5);
+    color: var(--accent-blue);
+}
+
 
 .textBlock {
-    flex-grow: 1;
-    padding: var(--spacing-md);
-    background: var(--bg-card);
-    backdrop-filter: var(--filter);
-    box-shadow: var(--shadow);
-    border: var(--border);
-    border-radius: var(--border-radius);
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    padding: calc(var(--spacing-sm) + 3px);
 }
 
 .contentText {
+    max-width: 100%;
     font-size: var(--font-size);
+    overflow-y: auto;
+    text-align: justify;
     line-height: 1.35;
-    margin: 0;
 }
 
-.backButton {
-    width: 35px;
-    margin: 10px 0;
-    display: none;
+@media (min-width: 1920px) {
+    .sections {
+        max-height: 520px;
+    }
+    .horizontalSliderBlock {
+        height: 100px;
+    }
 }
-
 
 @media (max-width: 1280px) {
     .photoSection {
-        width: 180px;
+        width: 196px;
     }
     .contentSection {
         min-width: 280px;
     }
-    .contactIcon {
-        width: 20px;
+    .container {
+        padding: calc(var(--spacing-sm) + 2px);
+    }
+    .container,
+    .photoSection,
+    .contentSection {
+        gap: var(--spacing-md);
     }
 }
 
 @media (max-width: 960px) {
     .photoSection {
-        width: 150px;
+        width: 200px;
         gap: var(--spacing-md);
     }
     .contentSection {
-        min-width: 230px;
-        gap: var(--spacing-md);
+        min-height: 100%;
+        min-width: unset;
     }
     .container {
         gap: var(--spacing-md);
-        padding: calc(var(--spacing-sm) + 2px);
     }
-    .contactIcon {
+    .linkIcon {
         width: 18px;
     }
 }
 
+@media (max-width: 825px) {
+    /* .homeButton {
+        display: block;
+    } */
+}
+
 @media (max-width: 615px) {
-    .contactIcon {
+    .linkIcon {
         width: 16px;
     }
-    .contactsBlock {
+    .linksBlock {
         padding: var(--spacing-xs) var(--spacing-sm);
     }
-    .stackBlock {
+    .skillsBlock {
         padding: var(--spacing-sm);
     }
     .textBlock {
@@ -164,30 +246,49 @@
     }
 }
 
-@media (max-width: 560px) {
-    .backButton {
-        display: block;
+@media (max-width: 570px) {
+    .contentSection {
+        justify-content: space-between;
+    }
+    .skillsBlock {
+        max-height: 64px;
+        height: 100%;
+        flex-grow: unset;
+    }
+    .linksRow {
+        flex-wrap: nowrap; 
+    }
+    /* или wrap */
+    .horizontalSliderBlock {
+        height: 60px;
+        min-height: unset;
     }
 }
 
-@media (max-width: 445px) {
+@media (max-width: 470px) {
     .photoSection {
         width: 135px;
+        
     }
     .contentSection {
         min-width: auto;
+        justify-content: space-between;
     }
-    .contactIcon {
+    .linkIcon {
         width: 14px;
     }
 }
 
 @media (max-width: 380px) {
     .photoSection {
-        width: 110px;
+        flex-grow: 1;
         gap: var(--spacing-sm);
     }
     .contentSection {
+        
+        gap: var(--spacing-sm);
+    }
+    .sections {
         gap: var(--spacing-sm);
     }
 }

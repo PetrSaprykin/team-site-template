@@ -1,12 +1,78 @@
-.sliderContainer {
-    display: flex;
-    order: 1;
-    align-items: center;
-    max-width: 450px;
+.projectCard {
+    background: var(--bg-card);
+    backdrop-filter: var(--filter);
+    border: var(--border);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+    height: 100%;
     width: 100%;
 }
 
+.splide {
+    height: 100%;
+    width: 100%;
+    cursor: grab;
+    overflow: hidden;
+}
 
-.button {
-    margin: 0 5px;
+.splideTrack {
+    height: 100%;
+    overflow: visible;
+    /* border-radius: var(--border-radius); */
+    width: 100%;
+}
+
+.splidePagination {
+    flex-wrap: nowrap;
+    position: unset;
+}
+
+:global(.splide__pagination__page.is-active) {
+    background-color: var(--accent-blue);
+}
+
+.slide {
+    height: 100%;
+    max-width: 256px;
+    width: 100%;
+    border-radius: var(--border-radius);
+}
+
+
+
+
+@media (max-width: 960px) {
+    
+    .splide {
+        display: flex;
+        height: 90px;
+        padding: 0 var(--spacing-xs) 0 var(--spacing-md);
+    }
+    .slide {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+    }
+    .projectCard {
+        height: 70px;
+        width: 100%;
+    }
+    .splidePagination {
+        margin-left: 3px;
+    }
+}
+
+@media (max-width: 570px) {
+    .splide {
+        height: 60px;
+        padding: 0;
+    }
+    .slide {
+        width: 150px !important;
+    }
+    .projectCard {
+        width: 150px;
+    }
 }
