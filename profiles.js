@@ -27,6 +27,9 @@ const profiles = [
             EasyWeek: 'frontend-developer',
             EasyAccess: 'frontend-developer',
             Dormitorium: 'game-designer',
+            UnrealEngine: 'frontend-developer',
+            Dormitorium_2: 'game-designer',
+            Dormitorium_3: 'game-designer',
         },
     },
     {
@@ -45,12 +48,8 @@ const profiles = [
             github: '@IGlek',
         },
         skills: 'Python, PostgreSQL, C++, Docker, Nginx, Qt, Django, Asyncio',
-        about: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-            dolor in reprehenderit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex.`,
+        about: `Мы - команда разработчиков из Московского политехнического университета. На этом сайте вы сможете найти все совместные
+                проекты, а также контакты каждого отдельного участника`,
         projects: {
             EasyWeek: 'backend-developer',
             EasyAccess: 'python-developer',
@@ -106,6 +105,11 @@ const profiles = [
             dolor in reprehenderit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
             quis nostrud exercitation ullamco laboris nisi ut aliquip ex.`,
+        projects: {
+            EasyWeek: 'docker-developer',
+            EasyAccess: 'python-developer',
+            Dormitorium: 'story-writer',
+        },
     },
     {
         id: 5,
@@ -129,6 +133,10 @@ const profiles = [
             dolor in reprehenderit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
             quis nostrud exercitation ullamco laboris nisi ut aliquip ex.`,
+        projects: {
+            EasyWeek: 'docker-developer',
+            EasyAccess: 'document',
+        },
     },
 ]
 

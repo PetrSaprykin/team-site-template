@@ -1,14 +1,15 @@
 import '@splidejs/splide/dist/css/splide.min.css'
 
 import { Splide } from '@splidejs/splide'
-import { onCleanup, onMount } from 'solid-js'
+import { createEffect, For, onCleanup } from 'solid-js'
 
 import styles from './CardSlider.module.css'
 
 export default function CardSlider(props) {
     let sliderEl
+    let splideInstance = null
 
-    onMount(() => {
+    createEffect(() => {
         const defaultOptions = {
             height: '100%',
             type: 'loop',
@@ -26,56 +27,50 @@ export default function CardSlider(props) {
             ...props.options,
         }
 
-        const splideInstance = new Splide(sliderEl, defaultOptions)
-        splideInstance.mount()
+        const projects = props.projects
+        console.log(projects)
+
+        if (splideInstance) {
+            splideInstance.destroy()
+            splideInstance = null
+        }
+
+        if (projects && Object.keys(projects).length > 0) {
+            splideInstance = new Splide(sliderEl, defaultOptions)
+            splideInstance.mount()
+        }
 
         onCleanup(() => splideInstance?.destroy())
     })
 
     return (
-        <div class={`splide ${styles.splide}`} ref={sliderEl}>
-            <div class={`splide__track ${styles.splideTrack}`}>
-                <ul class={`splide__list ${styles.splideList}`}>
-                    <li class={`splide__slide ${styles.slide}`}>
-                        <div class={styles.projectCard}>
-                            <img src="" alt="" />
-                        </div>
-                    </li>
-                    <li class={`splide__slide ${styles.slide}`}>
-                        <div class={styles.projectCard}>
-                            <img src="" alt="" />
-                        </div>
-                    </li>
-                    <li class={`splide__slide ${styles.slide}`}>
-                        <div class={styles.projectCard}>
-                            <img src="" alt="" />
-                        </div>
-                    </li>
-                    <li class={`splide__slide ${styles.slide}`}>
-                        <div class={styles.projectCard}>
-                            <img src="" alt="" />
-                        </div>
-                    </li>
-                    <li class={`splide__slide ${styles.slide}`}>
-                        <div class={styles.projectCard}>
-                            <img src="" alt="" />
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
+        <>
+            {!props.projects ? (
+                <p class={styles.empty}>No projects to display</p>
+            ) : (
+                <div class={`splide ${styles.splide}`} ref={sliderEl}>
+                    <div class={`splide__track ${styles.splideTrack}`}>
+                        <ul class={`splide__list ${styles.splideList}`}>
+                            <For each={Object.entries(props.projects)}>
+                                {([name, role]) => (
+                                    <li class={`splide__slide ${styles.slide}`}>
+                                        <div class={styles.projectCard}>
+                                            <img
+                                                src="https://pink-darb-33.tiiny.site/logotype.svg"
+                                                alt=""
+                                            />
+                                            <div class={styles.about}>
+                                                <p class={styles.projectName}>{name}</p>
+                                                <p class={styles.role}>{role}</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                )}
+                            </For>
+                        </ul>
+                    </div>
+                </div>
+            )}
+        </>
     )
 }
-
-// {
-//     direction: 'ttb',
-//     height: '100%',
-//     arrows: false,
-//     type: 'loop',
-//     padding: '5px',
-//     perPage: 1,
-//     gap: '10px',
-//     classes: {
-//         pagination: `splide__pagination ${styles.splidePagination}`,
-//     }
-// }

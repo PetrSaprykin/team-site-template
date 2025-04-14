@@ -12,7 +12,6 @@ export default function PersonCard(props) {
             }}
             onClick={() => {
                 props.onSelect(props.user)
-                props.onSend(props.user)
             }}
         >
             <span class={styles.selectTag}>

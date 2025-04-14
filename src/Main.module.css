@@ -14,11 +14,9 @@
 }
 .mainBlock {
   width: 100%;
-  height: auto;
-  max-height: min-content;
   display: flex;
   justify-content: center;
-  gap: var(--spacing-xl);
+  gap: calc(var(--spacing-xl) - 10px);
 }
 
 .cardColumn {
@@ -28,6 +26,13 @@
   width: max-content;
   justify-content: space-between;
   gap: var(--spacing-md);
+}
+
+.helloBlock {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  max-width: 900px;
 }
 
 
@@ -46,18 +51,24 @@
 
 
 @media (max-width: 825px) {
+  .mainSection {
+    justify-content: flex-start
+  }
   .mainBlock {
-    flex-direction: column;
-    justify-content: flex-start;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
     align-items: center;
-    gap: var(--spacing-sm);
+    height: 100%;
     max-height: unset;
-    height: auto;
     max-width: 950px;
     width: 100%;
   }
   .cardColumn {
-    display: none;
+    margin-top: var(--spacing-lg);
+    min-height: unset;
+  }
+  .title {
+    margin-bottom: var(--spacing-sm);
   }
 }
 
