@@ -71,7 +71,6 @@
     color: var(--accent-blue);
 }
 
-
 .sliderBlock {
     display: flex;
     justify-content: center;
@@ -156,19 +155,15 @@
     color: var(--accent-blue);
 }
 
-
 .textBlock {
+    max-width: 100%;
     width: 100%;
     height: 100%;
     overflow-y: auto;
-    padding: calc(var(--spacing-sm) + 3px);
-}
-
-.contentText {
-    max-width: 100%;
-    font-size: var(--font-size);
     text-align: justify;
     line-height: 1.35;
+    font-size: var(--font-size);
+    padding: calc(var(--spacing-sm) + 3px);
 }
 
 .homeButton {
@@ -256,8 +251,9 @@
         justify-content: space-between;
     }
     .skillsBlock {
-        max-height: 64px;
-        height: 100%;
+        min-height: 45px;
+        max-height: 90px;
+        height: fit-content;
         flex-grow: unset;
     }
 
@@ -266,13 +262,12 @@
     }
     /* или wrap */
     .linksRow {
-        flex-wrap: nowrap; 
+        flex-wrap: nowrap;
     }
-    
+
     .textBlock {
-        flex: 1;        /* Растягивается и сжимается */
-        min-height: 0;
-        overflow: auto;
+        flex: 1; /* Растягивается и сжимается */
+        min-height: 120px;
     }
     .horizontalSliderBlock {
         height: 60px;
@@ -288,7 +283,6 @@
 @media (max-width: 470px) {
     .photoSection {
         width: 135px;
-        
     }
     .contentSection {
         min-width: auto;
@@ -305,7 +299,6 @@
         gap: var(--spacing-sm);
     }
     .contentSection {
-        
         gap: var(--spacing-sm);
     }
     .sections {
