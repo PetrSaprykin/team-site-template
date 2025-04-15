@@ -1,6 +1,7 @@
 import '@splidejs/splide/dist/css/splide.min.css'
 
 import { Splide } from '@splidejs/splide'
+import { AutoScroll } from '@splidejs/splide-extension-auto-scroll'
 import { createEffect, For, onCleanup } from 'solid-js'
 
 import styles from './CardSlider.module.css'
@@ -10,34 +11,42 @@ export default function CardSlider(props) {
     let splideInstance = null
 
     createEffect(() => {
+        const projects = props.projects
+        const projectsCount = Object.keys(projects).length
+        const sliderOverflow = projectsCount >= 4 // 4 - число слайдов которое перестаёт помещаться в контейнер слайдера для desktop версии
+        const isMobile = props.isMobile
+
         const defaultOptions = {
+            drag: sliderOverflow || isMobile ? 'free' : false,
             height: '100%',
-            type: 'loop',
-            perPage: 3,
+            type: !sliderOverflow && isMobile ? 'slide' : 'loop',
+            perPage: 1,
+            clones: sliderOverflow ? 4 : 0,
             gap: '8px',
             arrows: false,
             pagination: false,
             autoWidth: true,
-            snap: false,
-            wheel: true,
-            speed: 1500,
             classes: {
                 pagination: `splide__pagination ${styles.splidePagination}`,
             },
             ...props.options,
         }
 
-        const projects = props.projects
-        console.log(projects)
-
         if (splideInstance) {
             splideInstance.destroy()
             splideInstance = null
         }
 
-        if (projects && Object.keys(projects).length > 0) {
+        // проверка на тип слайдера, если горизонтальный и cлайдер переполнен, включаем автоскролл
+        // в обратном случае автоскролла не будет, будет использовано autoplay из ...props.option
+
+        if (projects && projectsCount > 0) {
             splideInstance = new Splide(sliderEl, defaultOptions)
-            splideInstance.mount()
+            if (props.type == 'horizontal' && sliderOverflow) {
+                splideInstance.mount({ AutoScroll })
+            } else {
+                splideInstance.mount()
+            }
         }
 
         onCleanup(() => splideInstance?.destroy())

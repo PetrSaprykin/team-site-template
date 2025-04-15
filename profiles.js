@@ -13,8 +13,8 @@ const profiles = [
             email: 'saprykin@new-devs.ru',
             phone: '+7 (905) 688-27-76',
             site: 'saprykin.su',
-            telegram: '@easyforpapizzi',
-            github: '@Petruccio',
+            telegram: 'easyforpapizzi',
+            github: 'PetrSaprykin',
         },
         skills: 'Java, Python, C++, C#, Python, Python, Go, Python, Python,GitHub, Python, Go, Docker, GitHub, PostgreSQL, C++, C#, Discord, GitHub, Node.js, React, Vue, Slack',
         about: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -44,8 +44,8 @@ const profiles = [
             email: 'deev@new-devs.ru',
             phone: '+7 (999) 373-77-37',
             site: 'deev.space',
-            telegram: '@egor_deev',
-            github: '@IGlek',
+            telegram: 'egor_deev',
+            github: 'IGlek',
         },
         skills: 'Python, PostgreSQL, C++, Docker, Nginx, Qt, Django, Asyncio',
         about: `Мы - команда разработчиков из Московского политехнического университета. На этом сайте вы сможете найти все совместные
@@ -69,10 +69,20 @@ const profiles = [
             email: 'nochnoy@new-devs.ru',
             phone: '+7 (987) 154-83-54',
             site: 'new-devs.ru',
-            telegram: '@M_N1ght',
-            github: '@MN1ght',
+            telegram: 'M_N1ght',
+            github: 'MN1ght',
         },
         about: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+            dolor in reprehenderit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+            dolor in reprehenderit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
             incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
             exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
             dolor in reprehenderit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -96,8 +106,8 @@ const profiles = [
             email: 'starkov@new-devs.ru',
             phone: '+7 (978) 732-43-48',
             site: 'new-devs.ru',
-            telegram: '@Poems_of_Ray',
-            github: '@RayStar-k',
+            telegram: 'Poems_of_Ray',
+            github: 'RayStar-k',
         },
         about: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
             incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
@@ -124,8 +134,8 @@ const profiles = [
             email: 'pahaluyk@new-devs.ru',
             phone: '+7 (915) 109-54-54',
             site: 'new-devs.ru',
-            telegram: '@ilyaPahaluyk',
-            github: '@Starkcrimea',
+            telegram: 'ilyaPahaluyk',
+            github: 'Starkcrimea',
         },
         about: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
             incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud

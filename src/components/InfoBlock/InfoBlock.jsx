@@ -38,6 +38,7 @@ export default function InfoBlock(props) {
                             <div class={`${styles.sliderBlock} ${styles.block}`}>
                                 <CardSlider
                                     projects={props.user.projects}
+                                    slidersNumber={Object.keys(props.user.projects).length}
                                     options={{
                                         direction: 'ttb',
                                         perPage: 1,
@@ -49,7 +50,7 @@ export default function InfoBlock(props) {
                                             Object.keys(props.user.projects).length > 1
                                                 ? true
                                                 : false,
-                                        interval: 10000500,
+                                        interval: 2500,
                                     }}
                                 />
                             </div>
@@ -63,14 +64,20 @@ export default function InfoBlock(props) {
                                     <li class={styles.linkItem}>
                                         <FaSolidEnvelope class={styles.contactIcon} />
                                         <span>:</span>
-                                        <a href={`mailto:${props?.user?.contacts.email}`}>
+                                        <a
+                                            href={`mailto:${props?.user?.contacts.email}`}
+                                            target="blank"
+                                        >
                                             {props?.user?.contacts.email}
                                         </a>
                                     </li>
                                     <li class={styles.linkItem}>
                                         <FaSolidSquarePhone class={styles.contactIcon} />
                                         <span>:</span>
-                                        <a href={`tel:${props?.user?.contacts?.phone}`}>
+                                        <a
+                                            href={`tel:${props?.user?.contacts?.phone}`}
+                                            target="blank"
+                                        >
                                             {props?.user?.contacts?.phone}
                                         </a>
                                     </li>
@@ -79,14 +86,20 @@ export default function InfoBlock(props) {
                                     <li class={styles.linkItem}>
                                         <FaBrandsTelegram class={styles.contactIcon} />
                                         <span>:</span>
-                                        <a href={`t.me/${props?.user?.contacts?.telegram}`}>
-                                            {props?.user?.contacts?.telegram}
+                                        <a
+                                            href={`https://t.me/${props?.user?.contacts?.telegram}`}
+                                            target="blank"
+                                        >
+                                            @{props?.user?.contacts?.telegram}
                                         </a>
                                     </li>
                                     <li class={styles.linkItem}>
                                         <FaBrandsGithub class={styles.contactIcon} />
                                         <span>:</span>
-                                        <a href={`github.com/${props?.user?.contacts?.gihub}`}>
+                                        <a
+                                            href={`https://github.com/${props?.user?.contacts?.github}`}
+                                            target="blank"
+                                        >
                                             {props?.user?.contacts?.github}
                                         </a>
                                     </li>
@@ -96,7 +109,9 @@ export default function InfoBlock(props) {
 
                         <p class={`${styles.siteLinkRow} ${styles.block}`}>
                             Веб-сайт{' '}
-                            <a href={props?.user?.contacts?.site}>{props?.user?.contacts?.site}</a>
+                            <a href={`https://${props?.user?.contacts?.site}`} target="blank">
+                                {props?.user?.contacts?.site}
+                            </a>
                         </p>
                         <Show when={!isMobile()}>
                             <div class={`${styles.textBlock} ${styles.block}`}>
@@ -147,18 +162,20 @@ export default function InfoBlock(props) {
                             </For>
                         </ul>
                     </div>
-                    <div class={`${styles.textBlock} ${styles.block}`}>
-                        <p class={styles.contentText}>{props?.user?.about}</p>
-                    </div>
+                    <p class={`${styles.textBlock} ${styles.block}`}>{props?.user?.about}</p>
                 </Show>
                 <Show when={!isTablet() && props?.user}>
                     <div class={styles.horizontalSliderBlock}>
                         <CardSlider
                             projects={props.user?.projects}
+                            type="horizontal"
+                            isMobile={isMobile()}
                             options={{
                                 gap: '15px',
+                                autoScroll: {
+                                    speed: 0.75,
+                                },
                                 wheel: true,
-                                speed: 3000,
                             }}
                         />
                     </div>

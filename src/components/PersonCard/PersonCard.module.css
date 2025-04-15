@@ -11,15 +11,15 @@
     padding: calc(var(--spacing-sm) + 2px);
     box-shadow: var(--shadow);
     transition: var(--transition);
+    transform-origin: center;
 }
 
 /* сделать такой эффект не при hover, а при clicked (active) */
 
 
 .selectedCard {
-    transform: scale(1.03);
-    border: 2px solid var(--accent-blue);
-
+    transform: scale(1.05);
+    border: 1px solid var(--accent-blue);
 }
 
 .selectTag {
