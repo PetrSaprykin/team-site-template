@@ -94,9 +94,13 @@
     .card {
         padding: calc(var(--spacing-sm))
     }
+    .selectedCard {
+        transform: scale(1.03);
+        border: 1px solid var(--accent-blue);
+    }
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1100px) {
     .name span {
         display: none;
     }
@@ -104,8 +108,8 @@
 
 @media (max-width: 825px) {
     .card {
-        min-height: 75px;
-        max-height: 75px;
+        height: 75px;
+        width: 100%;
     }
     .cardImg {
         height: 100%;

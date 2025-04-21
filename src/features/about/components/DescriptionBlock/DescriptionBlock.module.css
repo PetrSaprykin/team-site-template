@@ -1,0 +1,26 @@
+.textBlock {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    text-align: justify;
+    line-height: 1.35;
+    font-size: var(--font-size);
+    padding: calc(var(--spacing-sm) + 3px);
+}
+
+
+
+@media (max-width: 615px) {
+    .textBlock {
+        padding: var(--spacing-sm);
+    }
+}
+
+@media (max-width: 570px) {
+    .textBlock {
+        flex: 1;
+        min-height: 60px;
+        height: fit-content;
+    }
+}

@@ -1,0 +1,76 @@
+.contactsBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: calc(var(--spacing-sm) + 3px);
+    background: var(--bg-card);
+    backdrop-filter: var(--filter);
+    border: var(--border);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.contactsRow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.contactItem {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    padding: var(--spacing-xs) calc(var(--spacing-sm) + 2px);
+    background: var(--bg-card);
+    border-radius: calc(var(--border-radius) * 0.5);
+}
+
+.contactIcon {
+    width: 20px;
+}
+
+.contactItem a {
+    margin-bottom: 3px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--accent-blue);
+}
+
+.contactItem span {
+    color: var(--primary-light);
+    margin: 0 0 3px 0;
+}
+
+@media (max-width: 960px) {
+    .contactIcon {
+        width: 18px;
+    }
+}
+
+@media (max-width: 615px) {
+    .contactIcon {
+        width: 16px;
+    }
+    .contactsBlock {
+        padding: var(--spacing-xs) var(--spacing-sm);
+    }
+}
+
+@media (max-width: 470px) {
+    .contactIcon {
+        width: 14px;
+    }
+}
+
+@media (max-width: 395px) {
+    .contactsRow {
+        flex-wrap: nowrap;
+    }
+}
+
+@media (max-width: 365px) {
+    .contactsRow {
+        flex-wrap: wrap;
+    }
+}

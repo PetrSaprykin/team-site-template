@@ -1,9 +1,9 @@
 import { FaSolidAngleRight } from 'solid-icons/fa'
 import { Show } from 'solid-js'
 
-import styles from './PersonCard.module.css'
+import styles from './MemberCard.module.css'
 
-export default function PersonCard(props) {
+export default function MemberCard(props) {
     return (
         <div
             classList={{

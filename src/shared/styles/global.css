@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 @import './theme.css';
 @import './reset.css';
 
@@ -13,14 +13,11 @@ body {
     font-size: var(--font-size);
     color: var(--primary-light);
     background-color: var(--bg-color);
+    font-weight: 300;
     background-image:
         radial-gradient(at 80% 20%, rgba(58, 134, 255, 0.15) 0px, transparent 50%),
         radial-gradient(at 20% 80%, rgba(76, 201, 240, 0.15) 0px, transparent 50%);
 }
-
-
-
-
 
 .container {
     width: 100%;
@@ -74,7 +71,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-weight: 600;
+    font-weight: 500;
 }
 
 h1 {
@@ -84,16 +81,24 @@ h1 {
 
 h2 {
     font-size: calc(var(--font-size) * 2);
+    font-weight: 400;
 }
 
 h3 {
-    font-weight: 400;
     font-size: calc(var(--font-size) * 1.350);
 }
 h4 {
     font-size: calc(var(--font-size) * 1.175);
     font-weight: 400;
     line-height: 1;
+}
+
+.block {
+    background: var(--bg-card);
+    backdrop-filter: var(--filter);
+    border: var(--border);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
 }
 
 @media (max-width: 1500px) {

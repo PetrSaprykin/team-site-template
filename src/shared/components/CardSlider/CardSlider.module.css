@@ -1,0 +1,144 @@
+.projectCard {
+  height: 100%;
+  width: 260px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  background: var(--bg-card);
+  backdrop-filter: var(--filter);
+  border: var(--border);
+  border-radius: var(--border-radius);
+  box-shadow: inset var(--shadow);
+}
+
+.projectCard img {
+  height: 100%;
+  aspect-ratio: 1;
+  border-radius: var(--border-radius);
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-around;
+}
+.projectName {
+  color: var(--primary-light);
+}
+
+.role {
+  width: fit-content;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: calc(var(--font-size) * 0.85);
+  font-family: var(--font-code);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background: var(--bg-card);
+  border-radius: calc(var(--border-radius) * 0.5);
+  color: var(--accent-blue);
+}
+
+.splide {
+  height: 100%;
+  overflow: visible;
+}
+
+.slide {
+  overflow: hidden;
+  height: 100%;
+}
+
+.splideTrack {
+  height: 100%;
+}
+
+.splideList {
+  width: 0px;
+}
+
+.splidePagination {
+  flex-wrap: nowrap;
+  position: unset;
+}
+
+:global(.splide__pagination__page.is-active) {
+  background-color: var(--accent-blue);
+}
+
+@media (min-width: 1920px) {
+
+  .projectCard img {
+    height: 70%;
+  }
+}
+
+@media (max-width: 1595px) {
+  .projectCard img {
+    height: 90%;
+  }
+}
+
+@media screen and (max-width: 960px) and (min-width: 570px) {
+  .splideList {
+    width: inherit;
+  }
+  .splide {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 90px;
+    margin: 0 var(--spacing-sm);
+  }
+  .splideTrack {
+    width: 100%;
+  }
+  .slide {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  .projectCard {
+    max-height: 75px;
+    width: 100%;
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: none;
+  }
+  .role {
+    white-space: wrap;
+  }
+  .about {
+    width: max-content;
+  }
+  .splidePagination {
+    margin-right: -6px;
+    margin-left: 2px;
+  }
+
+  .projectCard img {
+    height: 65%;
+    aspect-ratio: 1;
+  }
+}
+
+@media (max-width: 570px) {
+  .splide {
+    height: 60px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .projectCard {
+    width: 200px;
+    justify-content: flex-start;
+    padding: var(--spacing-md) var(--spacing-sm);
+  }
+  .about {
+    padding: var(--spacing-xs) 0;
+    gap: 2px;
+    width: 100%;
+  }
+}
