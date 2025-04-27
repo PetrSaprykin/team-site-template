@@ -13,7 +13,6 @@ import DescriptionBlock from './components/DescriptionBlock/DescriptionBlock'
 import SkillsBlock from './components/SkillsBlock/SkillsBlock'
 
 export default function AboutBlock(props) {
-  console.log(props)
   const hasWebSite = () => props?.member?.contacts?.site
 
   const isTablet = createMediaQuery('(max-width: 960px) and (min-width: 570px')

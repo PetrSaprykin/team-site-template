@@ -6,7 +6,8 @@ import { createSignal, Show } from 'solid-js'
 import introText from '../../introducing'
 import members from '../../members'
 import AboutBlock from '../features/about/AboutBlock'
-import TeamList from '../features/team/TeamList.jsx'
+import ProductsGrid from '../features/products/ProductsGrid'
+import TeamList from '../features/team/TeamList'
 import styles from './Main.module.css'
 
 export default function Main() {
@@ -28,20 +29,26 @@ export default function Main() {
   }
 
   return (
-    <section class={styles.mainSection}>
-      <h1 class={styles.title}>Команда New Devs</h1>
-      <div class={styles.mainBlock}>
-        <Show when={!isMobileLayout() || !infoBlockOpen()}>
-          <TeamList team={members} onSelect={handleSelect} selectedUserId={selectedUserId()} />
-        </Show>
+    <>
+      <section class={styles.mainSection}>
+        <h1 class={styles.mainSectionTitle}>Команда New Devs</h1>
+        <div class={styles.mainBlock}>
+          <Show when={!isMobileLayout() || !infoBlockOpen()}>
+            <TeamList team={members} onSelect={handleSelect} selectedUserId={selectedUserId()} />
+          </Show>
 
-        <Show
-          when={selectedUserId() != null && infoBlockOpen()}
-          fallback={<h3 class={styles.helloBlock}>{introText}</h3>}
-        >
-          <AboutBlock member={sentData()} onButtonClick={backButtonClick} />
-        </Show>
-      </div>
-    </section>
+          <Show
+            when={selectedUserId() != null && infoBlockOpen()}
+            fallback={<h3 class={styles.helloBlock}>{introText}</h3>}
+          >
+            <AboutBlock member={sentData()} onButtonClick={backButtonClick} />
+          </Show>
+        </div>
+      </section>
+      <section class={styles.productsSection}>
+        <h2 class={styles.productSectionTitle}>Проекты при нашем участии</h2>
+        <ProductsGrid />
+      </section>
+    </>
   )
 }

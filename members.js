@@ -1,8 +1,7 @@
 // image: [card_image_link, profile_image_link]
-
 const profiles = [
   {
-    id: 1,
+    id: 0,
     name: ['Сапрыкин', 'Пётр ', 'Иванович'],
     role: 'frontend-developer',
     image: {
@@ -25,16 +24,15 @@ const profiles = [
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
             quis nostrud exercitation ullamco laboris nisi ut aliquip ex.`,
     projects: {
-      EasyWeek: 'frontend-developer',
-      EasyAccess: 'frontend-developer',
+      EasyWeek: 'frontend',
+      EasyAccess: 'frontend',
+      'Сайт new-devs.ru': 'lead',
       Dormitorium: 'game-designer',
-      UnrealEngine: 'frontend-developer',
-      Dormitorium_2: 'game-designer',
-      Dormitorium_3: 'game-designer',
+      UnrealEngine: 'frontend',
     },
   },
   {
-    id: 2,
+    id: 1,
     name: ['Деев', 'Егор', 'Викторович'],
     role: 'backend-developer',
     image: {
@@ -52,13 +50,13 @@ const profiles = [
     about: `Мы - команда разработчиков из Московского политехнического университета. На этом сайте вы сможете найти все совместные
                 проекты, а также контакты каждого отдельного участника`,
     projects: {
-      EasyWeek: 'backend-developer',
-      EasyAccess: 'python-developer',
+      EasyWeek: 'backend',
+      EasyAccess: 'python',
       Dormitorium: 'game-designer',
     },
   },
   {
-    id: 3,
+    id: 2,
     name: ['Ночной', 'Максим', 'Сергеевич'],
     role: 'backend-developer',
     image: {
@@ -90,12 +88,12 @@ const profiles = [
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
             quis nostrud exercitation ullamco laboris nisi ut aliquip ex.`,
     projects: {
-      EasyWeek: 'docker-developer',
-      EasyAccess: 'python-developer',
+      EasyWeek: 'docker',
+      EasyAccess: 'python',
     },
   },
   {
-    id: 4,
+    id: 3,
     name: ['Старков', 'Руслан', 'Владимирович'],
     role: 'backend-developer',
     image: {
@@ -118,13 +116,13 @@ const profiles = [
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
             quis nostrud exercitation ullamco laboris nisi ut aliquip ex.`,
     projects: {
-      EasyWeek: 'docker-developer',
-      EasyAccess: 'python-developer',
+      EasyWeek: 'docker',
+      EasyAccess: 'python',
       Dormitorium: 'story-writer',
     },
   },
   {
-    id: 5,
+    id: 4,
     name: ['Пахалюк', 'Илья', 'Николаевич'],
     role: 'ML-developer',
     image: {
@@ -146,7 +144,7 @@ const profiles = [
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
             quis nostrud exercitation ullamco laboris nisi ut aliquip ex.`,
     projects: {
-      EasyWeek: 'docker-developer',
+      EasyWeek: 'docker',
       EasyAccess: 'document',
     },
   },
