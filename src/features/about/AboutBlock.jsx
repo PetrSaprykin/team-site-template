@@ -5,9 +5,9 @@ import { createMediaQuery } from '@solid-primitives/media'
 import { FaSolidHouseUser } from 'solid-icons/fa'
 import { Show } from 'solid-js'
 
+import Button from '../../shared/components/Button/Button'
 import CardSlider from '../../shared/components/CardSlider/CardSlider'
 import styles from './AboutBlock.module.css'
-// import HomeButton from '../../shared/components/Button/Button'
 import ContactsBlock from './components/ContactsBlock/ContactsBlock'
 import DescriptionBlock from './components/DescriptionBlock/DescriptionBlock'
 import SkillsBlock from './components/SkillsBlock/SkillsBlock'
@@ -94,9 +94,9 @@ export default function AboutBlock(props) {
           </div>
         </Show>
       </div>
-      <button class={styles.homeButton} onClick={() => props.onButtonClick()}>
+      <Button class={styles.homeButton} onClick={() => props.onButtonClick()}>
         <FaSolidHouseUser size={35} />
-      </button>
+      </Button>
     </>
   )
 }

@@ -1,114 +1,106 @@
 .productCard {
-    width: 100%;
-    max-width: 480px;
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-lg);
-    padding: var(--spacing-md);
-    background-color: var(--bg-section);
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  padding: var(--spacing-md);
+  background-color: var(--bg-section);
 }
 
 .header {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-  }
-  .logo {
-    width: 44px;
-    height: 44px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .logo img {
-    width: 100%;
-  }
-  .projectInfo {
-    display: flex;
-    flex-direction: column;
-  }
-  .projectTech {
-    margin-top: 4px;
-  }
-  .description {
-    color: var(--primary-light);
-  }
-  .teamTitle {
-    font-weight: normal;
-    transform: translateY(5px);
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
-  .team {
-    flex-grow: 1;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-md);
-    align-content: flex-start;
-  }
-  .member {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-md);
-    height: 60px;
-    background-color: var(--bg-card);
-    padding: 6px 8px;
-    border-radius: var(--border-radius);
-    border: var(--border);
-    transition: var(--transition);
-    cursor: pointer;
-  }
-  .member:hover {
-    background-color: var(--accent-blue);
-  }
-  .member:hover .memberRole {
-    color: white;
-  }
-  .avatar {
-    width: 44px;
-    height: 44px;
-    background-color: #4b5563;
-    border-radius: var(--border-radius);
-    flex-shrink: 0;
-  }
-  .avatar img {
-    width: 100%;
-    height: 100%;
-    border-radius: var(--border-radius);
-  }
-  .memberInfo {
-    display: flex;
-    flex-direction: column;
-  }
-  .memberName {
-    font-weight: normal;
-  }
-  .memberRole {
-    color: var(--accent-blue);
-    transition: var(--transition);
-  }
-  .button {
-    margin-top: 10px;
-    background: var(--bg-card);
-    border: var(--border);
-    color: var(--accent-blue);
-    padding: 14px;
-    border-radius: var(--border-radius);
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    transition: var(--transition);
-    display: block;
-  }
-  .button:hover {
-    background: var(--accent-blue);
-    color: var(--primary-light);
-    border-color: var(--accent-blue)
-  }
-
-
-
+.logo {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo img {
+  width: 100%;
+}
+.projectInfo {
+  display: flex;
+  flex-direction: column;
+}
+.projectTech {
+  margin-top: 4px;
+}
+.description {
+  color: var(--primary-light);
+}
+.teamTitle {
+  font-weight: normal;
+  transform: translateY(5px);
+}
+.team {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-md);
+  align-content: flex-start;
+}
+.member {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  height: 60px;
+  background-color: var(--bg-card);
+  padding: 6px 8px;
+  border-radius: var(--border-radius);
+  border: var(--border);
+  transition: var(--transition);
+  cursor: pointer;
+}
+.member:hover {
+  background-color: var(--accent-blue);
+}
+.member:hover .memberRole {
+  color: white;
+}
+.avatar {
+  width: 44px;
+  height: 44px;
+  background-color: #4b5563;
+  border-radius: var(--border-radius);
+  flex-shrink: 0;
+}
+.avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--border-radius);
+}
+.memberInfo {
+  display: flex;
+  flex-direction: column;
+}
+.memberName {
+  font-weight: normal;
+}
+.memberRole {
+  color: var(--accent-blue);
+  transition: var(--transition);
+}
+.button {
+  margin-top: 10px;
+  background: var(--bg-card);
+  border: var(--border);
+  color: var(--accent-blue);
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+}
+.button:hover {
+  background: var(--accent-blue);
+  color: var(--primary-light);
+  border-color: var(--accent-blue);
+}
 
 @media (max-width: 1160px) {
-    .team {
-        gap: var(--spacing-sm)
-    }
+  .team {
+    gap: var(--spacing-sm);
+  }
 }

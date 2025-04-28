@@ -1,8 +1,8 @@
 import { createEffect, createSignal, For } from 'solid-js'
 
 import members from '../../../../members'
+import Button from '../../../shared/components/Button/Button'
 import styles from './ProductCard.module.css'
-
 export default function ProductCard(props) {
   const [product, setProduct] = createSignal(null)
 
@@ -46,9 +46,30 @@ export default function ProductCard(props) {
           }}
         </For>
       </div>
-      <a href={product()?.link} class={styles.button} target="blank">
-        Смотреть на GitHub
-      </a>
+
+      <Button
+        href={product()?.link}
+        class={styles.button}
+        onClick={() => window.open(product()?.link, '_blank')}
+      >
+        {() => {
+          const link = product()?.link
+
+          const isGithub = () => {
+            try {
+              if (!link) return false
+              const parsedUrl = new URL(link)
+              return (
+                parsedUrl.hostname === 'github.com' || parsedUrl.hostname.endsWith('.github.com')
+              )
+            } catch {
+              return false
+            }
+          }
+
+          return isGithub() ? 'Смотреть на GitHub' : 'Перейти к проекту'
+        }}
+      </Button>
     </div>
   )
 }
