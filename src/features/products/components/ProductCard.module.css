@@ -27,8 +27,6 @@
     display: flex;
     flex-direction: column;
   }
-  .projectTitle {
-  }
   .projectTech {
     margin-top: 4px;
   }
