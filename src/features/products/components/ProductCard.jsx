@@ -11,15 +11,20 @@ export default function ProductCard(props) {
     console.log(props.product)
   })
 
+  const showMemberInfo = (member) => {
+    window.scroll({ top: 0, behavior: 'smooth' })
+    props.onMemberSelect(member)
+  }
+
   return (
-    <div class={`${styles.productCard} block`}>
+    <div class={`${styles.productCard} block`} card-name={product()?.name}>
       <div class={styles.header}>
         <div class={styles.logo}>
           <img src="https://pink-darb-33.tiiny.site/logotype.svg" alt="" />
         </div>
-        <div class={styles.projectInfo}>
-          <h3 class={styles.projectTitle}>{product()?.name}</h3>
-          <p class={styles.projectTech}>{product()?.stack.join(' · ')}</p>
+        <div class={styles.productInfo}>
+          <h3 class={styles.productTitle}>{product()?.name}</h3>
+          <p class={styles.productTech}>{product()?.stack.join(' · ')}</p>
         </div>
       </div>
 
@@ -28,10 +33,10 @@ export default function ProductCard(props) {
       <div class={styles.team}>
         <For each={product()?.membersId}>
           {(id) => {
-            const member = members.find((item) => item.id === id)
-            const memberRole = member.projects[product()?.name]
+            const member = members.find((memb) => memb.id === id)
+            const memberRole = member.products[product()?.name]
             return (
-              <div class={styles.member}>
+              <div class={styles.member} member-id={id} onClick={() => showMemberInfo(member)}>
                 <div class={styles.avatar}>
                   <img src="https://i.postimg.cc/rpD3hG6D/petr-card-pic.png" alt="" />
                 </div>

@@ -1,4 +1,4 @@
-.projectCard {
+.productCard {
   height: 100%;
   width: 260px;
   display: flex;
@@ -11,9 +11,15 @@
   border: var(--border);
   border-radius: var(--border-radius);
   box-shadow: inset var(--shadow);
+  transition: var(--transition);
 }
 
-.projectCard img {
+.productCard:hover {
+  border: 1px solid var(--accent-blue);
+  background: var(--bg-color);
+}
+
+.productCard img {
   height: 100%;
   aspect-ratio: 1;
   border-radius: var(--border-radius);
@@ -25,7 +31,7 @@
   height: 100%;
   justify-content: space-around;
 }
-.projectName {
+.productName {
   color: var(--primary-light);
 }
 
@@ -68,15 +74,20 @@
   background-color: var(--accent-blue);
 }
 
+:global(.splide__slide--clone) {
+  pointer-events: auto !important;
+}
+
+
 @media (min-width: 1920px) {
 
-  .projectCard img {
+  .productCard img {
     height: 70%;
   }
 }
 
 @media (max-width: 1595px) {
-  .projectCard img {
+  .productCard img {
     height: 90%;
   }
 }
@@ -101,7 +112,7 @@
     align-items: center;
     overflow: hidden;
   }
-  .projectCard {
+  .productCard {
     max-height: 75px;
     width: 100%;
     padding: var(--spacing-sm) var(--spacing-md);
@@ -114,11 +125,11 @@
     width: max-content;
   }
   .splidePagination {
-    margin-right: -6px;
+    margin-right: 0px;
     margin-left: 2px;
   }
 
-  .projectCard img {
+  .productCard img {
     height: 65%;
     aspect-ratio: 1;
   }
@@ -131,7 +142,7 @@
     margin: 0;
   }
 
-  .projectCard {
+  .productCard {
     width: 200px;
     justify-content: flex-start;
     padding: var(--spacing-md) var(--spacing-sm);

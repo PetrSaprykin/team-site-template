@@ -6,6 +6,18 @@
   gap: var(--spacing-lg);
   padding: var(--spacing-md);
   background-color: var(--bg-section);
+  transition: var(--transition);
+  scroll-margin-top: 90px;
+}
+
+:global(.flash-card) {
+  animation: flash 0.5s ease-in-out 3;
+  border-color: transparent;
+}
+
+@keyframes flash {
+  0%, 100% { outline: 3px solid transparent;  }
+  50% { outline: 3px solid var(--accent-blue);  }
 }
 
 .header {
@@ -32,14 +44,15 @@
 }
 .description {
   color: var(--primary-light);
+  flex: 1;
 }
 .teamTitle {
   font-weight: normal;
   transform: translateY(5px);
 }
 .team {
-  flex-grow: 1;
   display: grid;
+  height: 200px;
   grid-template-columns: 1fr 1fr;
   gap: var(--spacing-md);
   align-content: flex-start;

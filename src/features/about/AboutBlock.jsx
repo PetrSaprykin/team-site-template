@@ -17,7 +17,7 @@ export default function AboutBlock(props) {
 
   const isTablet = createMediaQuery('(max-width: 960px) and (min-width: 570px')
   const isMobile = createMediaQuery('(max-width: 570px')
-  const slidesCount = () => Object.keys(props?.member?.projects).length
+  const slidesCount = () => Object.keys(props?.member?.products).length
 
   return (
     <>
@@ -34,7 +34,7 @@ export default function AboutBlock(props) {
             <Show when={isTablet() && props?.member}>
               <div class={`${styles.verticalSliderBlock} block`}>
                 <CardSlider
-                  projects={props?.member?.projects}
+                  products={props?.member?.products}
                   slides={slidesCount()}
                   options={{
                     direction: 'ttb',
@@ -79,7 +79,7 @@ export default function AboutBlock(props) {
         <Show when={!isTablet()}>
           <div class={styles.horizontalSliderBlock}>
             <CardSlider
-              projects={props?.member?.projects}
+              products={props?.member?.products}
               slides={slidesCount()}
               type="horizontal"
               isMobile={isMobile()}
@@ -88,7 +88,6 @@ export default function AboutBlock(props) {
                 autoScroll: {
                   speed: 0.75,
                 },
-                wheel: true,
               }}
             />
           </div>

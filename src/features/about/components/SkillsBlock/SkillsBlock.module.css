@@ -16,12 +16,11 @@
     font-family: var(--font-code);
     height: min-content;
     width: min-content;
-    padding: var(--spacing-xs) var(--spacing-sm);
+    padding: calc(var(--spacing-xs) - 1px) var(--spacing-sm);
     background: var(--bg-card);
     border-radius: calc(var(--border-radius) * 0.5);
     color: var(--accent-blue);
 }
-
 
 
 @media (max-width: 615px) {
@@ -33,7 +32,7 @@
 @media (max-width: 570px) {
     .skillsBlock {
         min-height: 45px;
-        max-height: 70px;
+        max-height: 65px;
         height: fit-content;
         flex-grow: unset;
     }

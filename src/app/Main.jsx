@@ -47,7 +47,7 @@ export default function Main() {
       </section>
       <section class={styles.productsSection}>
         <h2 class={styles.productSectionTitle}>Проекты при нашем участии</h2>
-        <ProductsGrid />
+        <ProductsGrid onMemberSelect={handleSelect} />
       </section>
     </>
   )
