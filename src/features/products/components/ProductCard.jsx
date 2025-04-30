@@ -3,12 +3,12 @@ import { createEffect, createSignal, For } from 'solid-js'
 import members from '../../../../members'
 import Button from '../../../shared/components/Button/Button'
 import styles from './ProductCard.module.css'
+
 export default function ProductCard(props) {
   const [product, setProduct] = createSignal(null)
 
   createEffect(() => {
     setProduct(props.product)
-    console.log(props.product)
   })
 
   const showMemberInfo = (member) => {
@@ -20,7 +20,7 @@ export default function ProductCard(props) {
     <div class={`${styles.productCard} block`} card-name={product()?.name}>
       <div class={styles.header}>
         <div class={styles.logo}>
-          <img src="https://pink-darb-33.tiiny.site/logotype.svg" alt="" />
+          <img src={product()?.icon} alt={product()?.name} />
         </div>
         <div class={styles.productInfo}>
           <h3 class={styles.productTitle}>{product()?.name}</h3>
@@ -31,20 +31,19 @@ export default function ProductCard(props) {
       <p class={styles.description}>{product()?.about}</p>
       <h6 class={styles.teamTitle}>Участники:</h6>
       <div class={styles.team}>
-        <For each={product()?.membersId}>
-          {(id) => {
-            const member = members.find((memb) => memb.id === id)
-            const memberRole = member.products[product()?.name]
+        <For each={Object.entries(product()?.members || {})}>
+          {([id, role]) => {
+            const member = members.find((memb) => memb.id === Number(id))
             return (
               <div class={styles.member} member-id={id} onClick={() => showMemberInfo(member)}>
                 <div class={styles.avatar}>
-                  <img src="https://i.postimg.cc/rpD3hG6D/petr-card-pic.png" alt="" />
+                  <img src={member?.image} alt={member?.name[0]} />
                 </div>
                 <div class={styles.memberInfo}>
                   <span class={styles.memberName}>
                     {member?.name[0]} {member?.name[1].slice(0, 1)}.
                   </span>
-                  <span class={styles.memberRole}>{memberRole}</span>
+                  <span class={styles.memberRole}>{role}</span>
                 </div>
               </div>
             )

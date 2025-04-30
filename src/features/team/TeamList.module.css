@@ -4,12 +4,15 @@
     flex-direction: column;
     width: max-content;
     justify-content: space-between;
+
     gap: var(--spacing-md);
 }
 
 @media (max-width: 825px) {
     .cardList {
+        width: 100%;
         margin-top: var(--spacing-xs);
         min-height: unset;
+        align-items: center;
     }
 }

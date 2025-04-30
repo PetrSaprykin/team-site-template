@@ -17,7 +17,6 @@ export default function AboutBlock(props) {
 
   const isTablet = createMediaQuery('(max-width: 960px) and (min-width: 570px')
   const isMobile = createMediaQuery('(max-width: 570px')
-  const slidesCount = () => Object.keys(props?.member?.products).length
 
   return (
     <>
@@ -25,7 +24,7 @@ export default function AboutBlock(props) {
         <div class={styles.sections}>
           <div class={styles.leftSection}>
             <div class={`${styles.photoPlaceholder} block`}>
-              <img src={props?.member?.image?.profile} />
+              <img src={props?.member?.image} />
             </div>
 
             <Show when={!isMobile()}>
@@ -34,14 +33,12 @@ export default function AboutBlock(props) {
             <Show when={isTablet() && props?.member}>
               <div class={`${styles.verticalSliderBlock} block`}>
                 <CardSlider
-                  products={props?.member?.products}
-                  slides={slidesCount()}
+                  memberId={props?.member?.id}
+                  isTablet={isTablet()}
                   options={{
                     direction: 'ttb',
                     perPage: 1,
                     drag: true,
-                    pagination: slidesCount() <= 5 ? true : false,
-                    autoplay: slidesCount() > 1 ? true : false,
                     interval: 2500,
                   }}
                 />
@@ -73,15 +70,15 @@ export default function AboutBlock(props) {
         </div>
         <Show when={isMobile()}>
           <ContactsBlock member={props?.member} />
-          <SkillsBlock member={props.member} />
+          <SkillsBlock member={props?.member} />
           <DescriptionBlock content={props?.member?.about} />
         </Show>
         <Show when={!isTablet()}>
           <div class={styles.horizontalSliderBlock}>
             <CardSlider
-              products={props?.member?.products}
-              slides={slidesCount()}
+              memberId={props?.member?.id}
               type="horizontal"
+              isTablet={isTablet()}
               isMobile={isMobile()}
               options={{
                 gap: '15px',

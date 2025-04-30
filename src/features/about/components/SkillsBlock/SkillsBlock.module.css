@@ -32,8 +32,15 @@
 @media (max-width: 570px) {
     .skillsBlock {
         min-height: 45px;
-        max-height: 65px;
+        max-height: 125px;
         height: fit-content;
         flex-grow: unset;
+    }
+}
+
+@media (max-height: 668px) {
+    .skillsBlock {
+        min-height: 45px;
+        max-height: 40px;
     }
 }

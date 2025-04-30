@@ -79,7 +79,7 @@
 
 .siteLinkRow a {
     line-height: 1.8;
-    /* font-family: var(--font-code); */
+    font-family: var(--font-code);
     padding: var(--spacing-xs) var(--spacing-sm);
     background: var(--bg-card);
     border-radius: calc(var(--border-radius) * 0.5);

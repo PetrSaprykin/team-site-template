@@ -11,37 +11,37 @@ import TeamList from '../features/team/TeamList'
 import styles from './Main.module.css'
 
 export default function Main() {
-  const isMobileLayout = createMediaQuery('(max-width: 825px')
+  const isMobileLayout = createMediaQuery('(max-width: 825px)') // Добавлена закрывающая скобка
 
-  const [selectedUserId, setSelectedUserId] = createSignal(null)
-  const [infoBlockOpen, setInfoBlockOpen] = createSignal(false)
-  const [sentData, setSentData] = createSignal(null)
+  const [selectedMember, setSelectedMember] = createSignal(null) // Объединяем в одно состояние
 
-  const handleSelect = (user) => {
-    setInfoBlockOpen(true)
-    setSelectedUserId(user.id)
-    setSentData(user)
+  let mainBlock
+
+  const handleSelect = (member) => {
+    setSelectedMember(member) // Устанавливаем сразу весь объект
+    mainBlock.classList.add(styles.mobileOpened)
   }
 
   const backButtonClick = () => {
-    setSelectedUserId(null)
-    setInfoBlockOpen(false)
+    setSelectedMember(null)
+    mainBlock.classList.remove(styles.mobileOpened)
   }
 
   return (
     <>
       <section class={styles.mainSection}>
         <h1 class={styles.mainSectionTitle}>Команда New Devs</h1>
-        <div class={styles.mainBlock}>
-          <Show when={!isMobileLayout() || !infoBlockOpen()}>
-            <TeamList team={members} onSelect={handleSelect} selectedUserId={selectedUserId()} />
+        <div class={styles.mainBlock} ref={mainBlock}>
+          <Show when={!isMobileLayout() || !selectedMember()}>
+            <TeamList
+              team={members}
+              onSelect={handleSelect}
+              selectedUserId={selectedMember()?.id}
+            />
           </Show>
 
-          <Show
-            when={selectedUserId() != null && infoBlockOpen()}
-            fallback={<h3 class={styles.helloBlock}>{introText}</h3>}
-          >
-            <AboutBlock member={sentData()} onButtonClick={backButtonClick} />
+          <Show when={selectedMember()} fallback={<h3 class={styles.helloBlock}>{introText}</h3>}>
+            <AboutBlock member={selectedMember()} onButtonClick={backButtonClick} />
           </Show>
         </div>
       </section>
@@ -49,6 +49,9 @@ export default function Main() {
         <h2 class={styles.productSectionTitle}>Проекты при нашем участии</h2>
         <ProductsGrid onMemberSelect={handleSelect} />
       </section>
+      <footer class="block">
+        <h4>&copy; NEW-DEVS.RU 2025</h4>
+      </footer>
     </>
   )
 }

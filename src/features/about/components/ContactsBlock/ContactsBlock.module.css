@@ -30,6 +30,7 @@
 }
 
 .contactItem a {
+    font-weight: normal;
     margin-bottom: 3px;
     white-space: nowrap;
     overflow: hidden;

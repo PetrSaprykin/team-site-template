@@ -4,13 +4,30 @@ import { Splide } from '@splidejs/splide'
 import { AutoScroll } from '@splidejs/splide-extension-auto-scroll'
 import { createEffect, For, onCleanup } from 'solid-js'
 
+import products from '../../../../products'
 import styles from './CardSlider.module.css'
 
-function setupSplide(el, products, isMobile, type, options) {
-  const productsCount = Object.keys(products).length
-  const sliderOverflow = productsCount >= 3 || (isMobile && productsCount >= 2)
+function getProductsByMemberId(memberId) {
+  const result = []
 
-  console.log(sliderOverflow)
+  products.forEach((product) => {
+    Object.entries(product.members).forEach(([id, role]) => {
+      if (id == memberId) {
+        result.push({
+          name: product.name,
+          icon: product.icon,
+          role: role,
+        })
+      }
+    })
+  })
+
+  return result
+}
+
+function setupSplide(el, slides, isTablet, isMobile, type, options) {
+  const sliderOverflow =
+    slides.length >= 3 || (isTablet && slides.length >= 2) || (isMobile && slides.length > 1)
 
   const defaultOptions = {
     drag: sliderOverflow ? 'free' : false,
@@ -20,8 +37,10 @@ function setupSplide(el, products, isMobile, type, options) {
     wheel: sliderOverflow ? true : false,
     gap: '8px',
     arrows: false,
-    pagination: false,
     autoWidth: true,
+    pagination: slides.length <= 5 && isTablet ? true : false,
+    autoplay: slides.length > 1 && isTablet ? true : false,
+
     classes: {
       pagination: `splide__pagination ${styles.splidePagination}`,
     },
@@ -63,12 +82,15 @@ export default function CardSlider(props) {
   let sliderEl
   let splideInstance = null
 
+  const memberProducts = () => getProductsByMemberId(props.memberId)
+
   createEffect(() => {
-    if (!props.products) return
+    if (memberProducts().length == 0) return
 
     splideInstance = setupSplide(
       sliderEl,
-      props.products,
+      memberProducts(),
+      props.isTablet,
       props.isMobile,
       props.type,
       props.options
@@ -76,28 +98,28 @@ export default function CardSlider(props) {
     onCleanup(() => splideInstance?.destroy())
   })
 
-  const productList = () => Object.entries(props.products || {})
-
   return (
     <>
-      {!props.products ? (
+      {!products ? (
         <p class={styles.empty}>Нет проектов</p>
       ) : (
         <div class={`splide ${styles.splide}`} ref={sliderEl}>
           <div class={`splide__track ${styles.splideTrack}`}>
             <ul class={`splide__list ${styles.splideList}`}>
-              <For each={productList()}>
-                {([name, role]) => (
-                  <li class={`splide__slide ${styles.slide}`} product-name={name}>
-                    <div class={styles.productCard}>
-                      <img src="https://pink-darb-33.tiiny.site/logotype.svg" alt="" />
-                      <div class={styles.about}>
-                        <p class={styles.productName}>{name}</p>
-                        <p class={styles.role}>{role}</p>
+              <For each={memberProducts()}>
+                {(product) => {
+                  return (
+                    <li class={`splide__slide ${styles.slide}`} product-name={product.name}>
+                      <div class={styles.productCard}>
+                        <img src={product.icon} />
+                        <div class={styles.about}>
+                          <p class={styles.productName}>{product.name}</p>
+                          <p class={styles.role}>{product.role}</p>
+                        </div>
                       </div>
-                    </div>
-                  </li>
-                )}
+                    </li>
+                  )
+                }}
               </For>
             </ul>
           </div>

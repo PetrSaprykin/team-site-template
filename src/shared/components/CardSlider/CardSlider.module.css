@@ -1,5 +1,6 @@
 .productCard {
   height: 100%;
+  min-width: 260px;
   width: 260px;
   display: flex;
   align-items: center;
@@ -14,10 +15,20 @@
   transition: var(--transition);
 }
 
+
+
 .productCard:hover {
+  width: 100%;
   border: 1px solid var(--accent-blue);
+  transition: var(--transition);
   background: var(--bg-color);
 }
+
+.productCard:hover .about {
+  max-width: fit-content;
+  
+}
+
 
 .productCard img {
   height: 100%;
@@ -26,13 +37,20 @@
 }
 
 .about {
+  max-width: calc(100% - 60px);
   display: flex;
   flex-direction: column;
   height: 100%;
   justify-content: space-around;
+  overflow: hidden;
 }
 .productName {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  min-height: fit-content;
   color: var(--primary-light);
+  transition: var(--transition);
 }
 
 .role {
@@ -74,15 +92,11 @@
   background-color: var(--accent-blue);
 }
 
-:global(.splide__slide--clone) {
-  pointer-events: auto !important;
-}
-
 
 @media (min-width: 1920px) {
 
   .productCard img {
-    height: 70%;
+    height: 80%;
   }
 }
 
@@ -115,18 +129,20 @@
   .productCard {
     max-height: 75px;
     width: 100%;
+    min-width: unset;
     padding: var(--spacing-sm) var(--spacing-md);
     background: none;
+    margin-left: var(--spacing-sm);
   }
   .role {
     white-space: wrap;
   }
   .about {
     width: max-content;
+    height: min-content;
   }
   .splidePagination {
-    margin-right: 0px;
-    margin-left: 2px;
+    margin: 0 2px;
   }
 
   .productCard img {
@@ -151,5 +167,6 @@
     padding: var(--spacing-xs) 0;
     gap: 2px;
     width: 100%;
+    height: min-content;
   }
 }
