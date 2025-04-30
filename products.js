@@ -1,5 +1,6 @@
 const products = [
   {
+    id: 0,
     name: 'EasyWeek',
     stack: ['C++', 'Qt', 'Docker', 'Doxygen'],
     about: `Приложенияе для автоматического составления индивидуального меню на неделю
@@ -15,6 +16,7 @@ const products = [
     link: 'https://github.com/New-Ds/Easy-Week',
   },
   {
+    id: 1,
     name: 'EasyAccess',
     stack: ['Python', 'SolidJS', 'Go', 'Supabase'],
     about: `Бразуерное расширение для обеспечения доступности веб-сайтов для лиц с ОВЗ`,
@@ -29,6 +31,7 @@ const products = [
     link: 'https://github.com/easyaccess-team/easyaccess-extension',
   },
   {
+    id: 2,
     name: 'Сайт new-devs.ru',
     stack: ['SolidJS', 'HTML', 'CSS', 'Vite'],
     about: `Сайт команды New Devs, создан frontend-разработчиком команды`,
@@ -39,6 +42,7 @@ const products = [
     link: 'https://new-devs.ru',
   },
   {
+    id: 3,
     name: 'Dormitorium',
     stack: ['Python', 'PyGame'],
     about: `Визуальная пиксельная новелла про общежитие с элементами хоррора и простой шутерной составляющей`,
@@ -51,11 +55,12 @@ const products = [
     link: 'https://github.com/IGlek/Dormitorium',
   },
   {
+    id: 4,
     name: 'Сайт harlamenkov.ru',
     stack: ['Astroid', 'Joomla', 'CSS', 'JS'],
     about: `Разработали по заказу сайт директора ЦНИИ Русского жестового языка Харламенкова А.Е.`,
     members: {
-      0: 'frontend',  
+      0: 'frontend',
       1: 'analyst',
       2: 'joomla',
     },

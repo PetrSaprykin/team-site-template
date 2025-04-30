@@ -55,6 +55,13 @@ function setupSplide(el, slides, isTablet, isMobile, type, options) {
     splide.mount()
   }
 
+  //возобновление автопрокрутки после клика на слайд с проектом
+  splide.on('click', () => {
+    // уничтожаем текущий автоскролл и монтируем заново чтобы избежать наслаивания скорости прокрутки
+    splide.Components.AutoScroll.destroy()
+    splide.Components.AutoScroll.mount()
+  })
+
   // обработчик кликов, не исользую onClcick на элементе слайда потому что так не происходит обработка клонов
   splide.on('click', (slide, event) => {
     const clickedSlide = event.target.closest('.splide__slide')

@@ -1,4 +1,4 @@
-import { createEffect, createSignal, For } from 'solid-js'
+import { createEffect, createSignal, For, onMount } from 'solid-js'
 
 import members from '../../../../members'
 import Button from '../../../shared/components/Button/Button'
@@ -7,8 +7,27 @@ import styles from './ProductCard.module.css'
 export default function ProductCard(props) {
   const [product, setProduct] = createSignal(null)
 
+  let cardRef
+
   createEffect(() => {
     setProduct(props.product)
+  })
+
+  // прокрутка страницы к карточке при наличии в url якоря
+  // пример: www.new-devs.ru/#0 где 0 - id проекта
+  onMount(() => {
+    const hash = window.location.hash.slice(1) // Убираем #
+    console.log(hash, product()?.id)
+    if (hash && cardRef && hash === product()?.id?.toString()) {
+      cardRef.scrollIntoView({ behavior: 'smooth' })
+      setTimeout(() => {
+        cardRef.classList.add('flash-card')
+
+        setTimeout(() => {
+          cardRef.classList.remove('flash-card')
+        }, 1500) // время одной анимаци * кол-во анимаций (500*3 = 1500) (ms)
+      }, 750) //задержка между началом скролла и началом анимации
+    }
   })
 
   const showMemberInfo = (member) => {
@@ -17,7 +36,7 @@ export default function ProductCard(props) {
   }
 
   return (
-    <div class={`${styles.productCard} block`} card-name={product()?.name}>
+    <div class={`${styles.productCard} block`} card-name={product()?.name} ref={cardRef}>
       <div class={styles.header}>
         <div class={styles.logo}>
           <img src={product()?.icon} alt={product()?.name} />

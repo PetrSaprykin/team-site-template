@@ -170,3 +170,22 @@
     height: min-content;
   }
 }
+
+@media (hover: none) {
+  .productCard:hover {
+    border: 1px solid var(--accent-blue);
+    transition: var(--transition);
+    background: var(--bg-color);
+
+  width: 260px;
+
+
+  background: var(--bg-card);
+  border: var(--border);
+  }
+  
+  .productCard:hover .about {
+    max-width: calc(100% - 60px);
+    
+  }
+}

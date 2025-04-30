@@ -80,6 +80,8 @@
 .member:hover .memberRole {
   color: white;
 }
+
+
 .avatar {
   width: 44px;
   height: 44px;
@@ -121,5 +123,14 @@
 @media (max-width: 1160px) {
   .team {
     gap: var(--spacing-sm);
+  }
+}
+
+@media (hover: none) {
+  .member:hover {
+    background-color: var(--bg-card);
+  }
+  .member:hover .memberRole {
+    color: var(--accent-blue);
   }
 }
