@@ -4,7 +4,7 @@ const members = [
     id: 0,
     name: ['Сапрыкин', 'Пётр ', 'Иванович'],
     role: 'frontend-developer',
-    image: './public/membersPhotos/petr.png',
+    image: '/images/membersPhotos/petr.png',
     contacts: {
       email: 'saprykin@new-devs.ru',
       phone: '+7 (905) 688-27-76',
@@ -23,7 +23,7 @@ const members = [
     id: 1,
     name: ['Деев', 'Егор', 'Викторович'],
     role: 'backend-developer',
-    image: './public/membersPhotos/egor.png',
+    image: '/images/membersPhotos/egor.png',
     contacts: {
       email: 'deev@new-devs.ru',
       phone: '+7 (999) 373-77-37',
@@ -41,7 +41,7 @@ const members = [
     id: 2,
     name: ['Ночной', 'Максим', 'Сергеевич'],
     role: 'backend-developer',
-    image: './public/membersPhotos/maks.png',
+    image: '/images/membersPhotos/maks.png',
     skills: 'Java, Python, Go, Docker, PostgreSQL, C++, C#, Discord, Slack',
     contacts: {
       email: 'nochnoy@new-devs.ru',
@@ -58,7 +58,7 @@ const members = [
     id: 3,
     name: ['Старков', 'Руслан', 'Владимирович'],
     role: 'backend-developer',
-    image: './public/membersPhotos/ruslan.png',
+    image: '/images/membersPhotos/ruslan.png',
     skills:
       'Java, Python, Go, Docker, PostgreSQL, C++, C#, Discord, Slack, Unity, VSCode, Brain, Kubernetus',
     contacts: {
@@ -79,7 +79,7 @@ const members = [
     id: 4,
     name: ['Пахалюк', 'Илья', 'Николаевич'],
     role: 'ML-developer',
-    image: './public/membersPhotos/ilya.png',
+    image: '/images/membersPhotos/ilya.png',
     skills: 'Python, Go, Docker, PostgreSQL, C++, Discord',
     contacts: {
       email: 'pahaluyk@new-devs.ru',
