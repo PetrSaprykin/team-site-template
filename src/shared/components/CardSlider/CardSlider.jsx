@@ -4,9 +4,9 @@ import { Splide } from '@splidejs/splide'
 import { AutoScroll } from '@splidejs/splide-extension-auto-scroll'
 import { createEffect, For, onCleanup } from 'solid-js'
 
-import settings from '/settings.json' with { type: 'json' };
+import settings from '/settings.json' with { type: 'json' }
 
-const products = settings.products;
+const products = settings.products
 import styles from './CardSlider.module.css'
 
 function getProductsByMemberId(memberId) {
@@ -58,11 +58,13 @@ function setupSplide(el, slides, isTablet, isMobile, type, options) {
   }
 
   //возобновление автопрокрутки после клика на слайд с проектом
-  splide.on('click', () => {
-    // уничтожаем текущий автоскролл и монтируем заново чтобы избежать наслаивания скорости прокрутки
-    splide.Components.AutoScroll.destroy()
-    splide.Components.AutoScroll.mount()
-  })
+  if (sliderOverflow) {
+    splide.on('click', () => {
+      // уничтожаем текущий автоскролл и монтируем заново чтобы избежать наслаивания скорости прокрутки
+      splide.Components.AutoScroll.destroy()
+      splide.Components.AutoScroll.mount()
+    })
+  }
 
   // обработчик кликов, не исользую onClcick на элементе слайда потому что так не происходит обработка клонов
   splide.on('click', (slide, event) => {

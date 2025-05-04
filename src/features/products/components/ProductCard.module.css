@@ -1,136 +1,140 @@
 .productCard {
-  width: 100%;
-  max-width: 480px;
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-lg);
-  padding: var(--spacing-md);
-  background-color: var(--bg-section);
-  transition: var(--transition);
-  scroll-margin-top: 90px;
+    width: 100%;
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-md);
+    background-color: var(--bg-section);
+    transition: var(--transition);
+    scroll-margin-top: 90px;
 }
 
 :global(.flash-card) {
-  animation: flash 0.5s ease-in-out 3;
-  border-color: transparent;
+    animation: flash 0.5s ease-in-out 3;
+    border-color: transparent;
 }
 
 @keyframes flash {
-  0%, 100% { outline: 3px solid transparent;  }
-  50% { outline: 3px solid var(--accent-blue);  }
+    0%,
+    100% {
+        outline: 3px solid transparent;
+    }
+    50% {
+        outline: 3px solid var(--accent-blue);
+    }
 }
 
 .header {
-  display: flex;
-  align-items: center;
-  gap: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 .logo {
-  width: 56px;
-  height: 56px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: var(--border-radius);
+    width: 56px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--border-radius);
 }
 .logo img {
-  width: 100%;
-  border-radius: var(--border-radius);
-  fill: var(--accent-blue) !important;
-  stroke: var(--accent-blue) !important;
+    width: 100%;
+    border-radius: var(--border-radius);
+    fill: var(--accent-blue) !important;
+    stroke: var(--accent-blue) !important;
 }
 
 .productInfo {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-
 
 .description {
-  color: var(--primary-light);
-  flex: 1;
+    color: var(--primary-light);
+    white-space: pre-line;
+    flex: 1;
 }
 .teamTitle {
-  font-weight: normal;
-  transform: translateY(5px);
+    font-weight: normal;
+    transform: translateY(5px);
 }
 .team {
-  display: grid;
-  height: 200px;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--spacing-md);
-  align-content: flex-start;
+    display: grid;
+    height: 200px;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-md);
+    align-content: flex-start;
 }
 .member {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-md);
-  height: 60px;
-  background-color: var(--bg-card);
-  padding: 6px 8px;
-  border-radius: var(--border-radius);
-  border: var(--border);
-  transition: var(--transition);
-  cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    height: 60px;
+    background-color: var(--bg-card);
+    padding: 6px 8px;
+    border-radius: var(--border-radius);
+    border: var(--border);
+    transition: var(--transition);
+    cursor: pointer;
 }
 .member:hover {
-  background-color: var(--accent-blue);
+    background-color: var(--accent-blue);
 }
 .member:hover .memberRole {
-  color: white;
+    color: white;
 }
-
 
 .avatar {
-  width: 44px;
-  height: 44px;
-  background-color: #4b5563;
-  border-radius: var(--border-radius);
-  flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    background-color: #4b5563;
+    border-radius: var(--border-radius);
+    flex-shrink: 0;
 }
 .avatar img {
-  width: 100%;
-  height: 100%;
-  border-radius: var(--border-radius);
+    width: 100%;
+    height: 100%;
+    border-radius: var(--border-radius);
 }
 .memberInfo {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 .memberName {
-  font-weight: normal;
+    font-weight: normal;
 }
 .memberRole {
-  font-family: var(--font-code);
-  color: var(--accent-blue);
-  transition: var(--transition);
+    font-family: var(--font-code);
+    color: var(--accent-blue);
+    transition: var(--transition);
 }
 .button {
-  margin-top: 10px;
-  background: var(--bg-card);
-  border: var(--border);
-  color: var(--accent-blue);
-  border-radius: var(--border-radius);
-  transition: var(--transition);
+    margin-top: 10px;
+    background: var(--bg-card);
+    border: var(--border);
+    color: var(--accent-blue);
+    border-radius: var(--border-radius);
+    transition: var(--transition);
 }
 .button:hover {
-  background: var(--accent-blue);
-  color: var(--primary-light);
-  border-color: var(--accent-blue);
+    background: var(--accent-blue);
+    color: var(--primary-light);
+    border-color: var(--accent-blue);
 }
 
 @media (max-width: 1160px) {
-  .team {
-    gap: var(--spacing-sm);
-  }
+    .team {
+        gap: var(--spacing-sm);
+    }
 }
 
 @media (hover: none) {
-  .member:hover {
-    background-color: var(--bg-card);
-  }
-  .member:hover .memberRole {
-    color: var(--accent-blue);
-  }
+    .member:hover {
+        background-color: var(--bg-card);
+    }
+    .member:hover .memberRole {
+        color: var(--accent-blue);
+    }
 }

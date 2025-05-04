@@ -23,8 +23,6 @@
     min-height: 0;
 }
 
-
-
 .leftSection {
     max-width: 260px;
     display: flex;
@@ -39,8 +37,6 @@
 .photoPlaceholder img {
     border-radius: var(--border-radius);
 }
-
-
 
 .verticalSliderBlock {
     display: flex;
@@ -67,14 +63,10 @@
 
 .title {
     color: var(--text-color);
-    
 }
-
-
 
 .siteLinkRow {
     padding: var(--spacing-xs) calc(var(--spacing-sm) + 3px);
-    
 }
 
 .siteLinkRow a {
@@ -84,10 +76,7 @@
     background: var(--bg-card);
     border-radius: calc(var(--border-radius) * 0.5);
     color: var(--accent-blue);
-    
 }
-
-
 
 .homeButton {
     order: -1;
@@ -98,14 +87,13 @@
     .horizontalSliderBlock {
         max-height: 90px;
         height: 100%;
-
     }
 }
 
 @media (max-width: 1280px) {
     .sections {
         max-height: 380px;
-        gap: var(--spacing-md)
+        gap: var(--spacing-md);
     }
     .leftSection {
         width: 196px;

@@ -1,5 +1,6 @@
 .skillsBlock {
     flex-grow: 1;
+    min-height: 45px;
     height: 100%;
     overflow-y: auto;
     padding: calc(var(--spacing-sm) + 3px);
@@ -15,13 +16,12 @@
 .skillsList li {
     font-family: var(--font-code);
     height: min-content;
-    width: min-content;
+    width: fit-content;
     padding: calc(var(--spacing-xs) - 1px) var(--spacing-sm);
     background: var(--bg-card);
     border-radius: calc(var(--border-radius) * 0.5);
     color: var(--accent-blue);
 }
-
 
 @media (max-width: 615px) {
     .skillsBlock {
@@ -31,16 +31,20 @@
 
 @media (max-width: 570px) {
     .skillsBlock {
-        min-height: 45px;
         max-height: 125px;
         height: fit-content;
         flex-grow: unset;
     }
 }
 
-@media (max-height: 668px) {
+@media (max-height: 740px) {
     .skillsBlock {
-        min-height: 45px;
-        max-height: 40px;
+        max-height: 65px;
+    }
+}
+
+@media (max-height: 640px) {
+    .skillsBlock {
+        max-height: 45px;
     }
 }

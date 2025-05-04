@@ -8,5 +8,14 @@
     "arrowParens": "always",
     "endOfLine": "lf",
     "jsxSingleQuote": false,
-    "jsxBracketSameLine": false
+    "jsxBracketSameLine": false,
+
+    "overrides": [
+    {
+      "files": ["*.css"],
+      "options": {
+        "tabWidth": 4
+      }
+    }
+  ]
 }

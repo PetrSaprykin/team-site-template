@@ -61,6 +61,7 @@ footer {
 
 footer h4 {
   vertical-align: middle;
+  text-transform: uppercase;
 }
 
 @media (min-width: 1921px) {

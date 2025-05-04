@@ -5,11 +5,10 @@
     overflow-y: auto;
     text-align: justify;
     line-height: 1.35;
+    white-space: pre-wrap;
     font-size: var(--font-size);
     padding: calc(var(--spacing-sm) + 3px);
 }
-
-
 
 @media (max-width: 615px) {
     .textBlock {

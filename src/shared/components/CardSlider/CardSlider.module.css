@@ -1,192 +1,173 @@
 .productCard {
-  height: 100%;
-  min-width: 260px;
-  width: 260px;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  gap: var(--spacing-md);
-  padding: var(--spacing-md);
-  background: var(--bg-card);
-  backdrop-filter: var(--filter);
-  border: var(--border);
-  border-radius: var(--border-radius);
-  box-shadow: inset var(--shadow);
-  transition: var(--transition);
-}
-
-
-
-.productCard:hover {
-  width: 100%;
-  border: 1px solid var(--accent-blue);
-  transition: var(--transition);
-  background: var(--bg-color);
-}
-
-.productCard:hover .about {
-  max-width: fit-content;
-  
-}
-
-
-.productCard img {
-  height: 100%;
-  aspect-ratio: 1;
-  border-radius: var(--border-radius);
-}
-
-.about {
-  max-width: calc(100% - 60px);
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  justify-content: space-around;
-  overflow: hidden;
-}
-
-.productName {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  min-height: fit-content;
-  color: var(--primary-light);
-  transition: var(--transition);
-}
-
-.role {
-  width: fit-content;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  font-size: calc(var(--font-size) * 0.85);
-  font-family: var(--font-code);
-  padding: var(--spacing-xs) var(--spacing-sm);
-  background: var(--bg-card);
-  border-radius: calc(var(--border-radius) * 0.5);
-  color: var(--accent-blue);
-}
-
-.splide {
-  height: 100%;
-  overflow: visible;
-}
-
-.slide {
-  overflow: hidden;
-  height: 100%;
-}
-
-.splideTrack {
-  height: 100%;
-}
-
-.splideList {
-  width: 0px;
-}
-
-.splidePagination {
-  flex-wrap: nowrap;
-  position: unset;
-}
-
-:global(.splide__pagination__page.is-active) {
-  background-color: var(--accent-blue);
-}
-
-
-@media (min-width: 1920px) {
-
-  .productCard img {
-    height: 80%;
-  }
-}
-
-@media (max-width: 1595px) {
-  .productCard img {
-    height: 90%;
-  }
-}
-
-@media screen and (max-width: 960px) and (min-width: 570px) {
-  .splideList {
-    width: inherit;
-  }
-  .splide {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    height: 90px;
-    margin: 0 var(--spacing-sm);
-  }
-  .splideTrack {
-    width: 100%;
-  }
-  .slide {
-    width: 100%;
+    height: 100%;
+    min-width: 260px;
+    width: 260px;
     display: flex;
     align-items: center;
-    overflow: hidden;
-  }
-  .productCard {
-    max-height: 75px;
-    width: 100%;
-    min-width: unset;
-    padding: var(--spacing-sm) var(--spacing-md);
-    background: none;
-    margin-left: var(--spacing-sm);
-  }
-  .role {
-    white-space: wrap;
-  }
-  .about {
-    width: max-content;
-    height: min-content;
-  }
-  .splidePagination {
-    margin: 0 2px;
-  }
-
-  .productCard img {
-    height: 65%;
-    aspect-ratio: 1;
-  }
+    cursor: pointer;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+    background: var(--bg-card);
+    backdrop-filter: var(--filter);
+    border: var(--border);
+    border-radius: var(--border-radius);
+    box-shadow: inset var(--shadow);
+    transition: var(--transition);
 }
 
-@media (max-width: 570px) {
-  .splide {
-    height: 60px;
-    padding: 0;
-    margin: 0;
-  }
-
-  .productCard {
-    width: 200px;
-    justify-content: flex-start;
-    padding: var(--spacing-md) var(--spacing-sm);
-  }
-  .about {
-    padding: var(--spacing-xs) 0;
-    gap: 2px;
+.productCard:hover {
     width: 100%;
-    height: min-content;
-  }
-}
-
-@media (hover: none) {
-  .productCard:hover {
     border: 1px solid var(--accent-blue);
     transition: var(--transition);
     background: var(--bg-color);
+}
 
-  width: 260px;
+.productCard:hover .about {
+    max-width: fit-content;
+}
 
+.productCard img {
+    height: 90%;
+    aspect-ratio: 1;
+    border-radius: var(--border-radius);
+}
 
-  background: var(--bg-card);
-  border: var(--border);
-  }
-  
-  .productCard:hover .about {
+.about {
     max-width: calc(100% - 60px);
-    
-  }
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around;
+    overflow: hidden;
+}
+
+.productName {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    min-height: fit-content;
+    color: var(--primary-light);
+    transition: var(--transition);
+}
+
+.role {
+    width: fit-content;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: calc(var(--font-size) * 0.85);
+    font-family: var(--font-code);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    background: var(--bg-card);
+    border-radius: calc(var(--border-radius) * 0.5);
+    color: var(--accent-blue);
+}
+
+.splide {
+    height: 100%;
+    overflow: visible;
+    transition: var(--transition);
+}
+
+.slide {
+    overflow: hidden;
+    height: 100%;
+}
+
+.splideTrack {
+    height: 100%;
+}
+
+.splideList {
+    width: 0px;
+}
+
+.splidePagination {
+    flex-wrap: nowrap;
+    position: unset;
+}
+
+:global(.splide__pagination__page.is-active) {
+    background-color: var(--accent-blue);
+}
+
+@media screen and (max-width: 960px) and (min-width: 570px) {
+    .splideList {
+        width: inherit;
+    }
+    .splide {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        height: 90px;
+        margin: 0 var(--spacing-sm);
+    }
+    .splideTrack {
+        width: 100%;
+    }
+    .slide {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+    }
+    .productCard {
+        max-height: 75px;
+        width: 100%;
+        min-width: unset;
+        padding: var(--spacing-sm) var(--spacing-md);
+        background: none;
+        margin-left: var(--spacing-sm);
+    }
+    .role {
+        white-space: wrap;
+    }
+    .about {
+        width: max-content;
+        height: min-content;
+    }
+    .splidePagination {
+        margin: 0 2px;
+    }
+
+    .productCard img {
+        height: 65%;
+        aspect-ratio: 1;
+    }
+}
+
+@media (max-width: 570px) {
+    .splide {
+        height: 60px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .productCard {
+        width: 200px;
+        justify-content: flex-start;
+        padding: var(--spacing-md) var(--spacing-sm);
+    }
+    .about {
+        padding: var(--spacing-xs) 0;
+        gap: 2px;
+        width: 100%;
+        height: min-content;
+    }
+}
+
+@media (hover: none) {
+    .productCard:hover {
+        border: 1px solid var(--accent-blue);
+        transition: var(--transition);
+        background: var(--bg-color);
+
+        width: 260px;
+
+        background: var(--bg-card);
+        border: var(--border);
+    }
+
+    .productCard:hover .about {
+        max-width: calc(100% - 60px);
+    }
 }

@@ -1,10 +1,11 @@
 import { createEffect, createSignal, For, onMount } from 'solid-js'
 
-import settings from '/settings.json' with { type: 'json' };  // Современный синтаксис
+import settings from '/settings.json' with { type: 'json' } // Современный синтаксис
+
 import Button from '../../../shared/components/Button/Button'
 import styles from './ProductCard.module.css'
 
-const members = settings.team.members;
+const members = settings.team.members
 
 export default function ProductCard(props) {
   const [product, setProduct] = createSignal(null)
@@ -19,7 +20,6 @@ export default function ProductCard(props) {
   // пример: www.new-devs.ru/#0 где 0 - id проекта
   onMount(() => {
     const hash = window.location.hash.slice(1) // Убираем #
-    console.log(hash, product()?.id)
     if (hash && cardRef && hash === product()?.id?.toString()) {
       cardRef.scrollIntoView({ behavior: 'smooth' })
       setTimeout(() => {

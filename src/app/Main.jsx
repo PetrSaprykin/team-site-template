@@ -3,8 +3,7 @@ import './../shared/styles/global.css'
 import { createMediaQuery } from '@solid-primitives/media'
 import { createSignal, Show } from 'solid-js'
 
-import settings from '/settings.json' with { type: 'json' };
-const members = settings.team.members;
+import settings from '/settings.json' with { type: 'json' }
 
 import AboutBlock from '../features/about/AboutBlock'
 import ProductsGrid from '../features/products/ProductsGrid'
@@ -12,6 +11,9 @@ import TeamList from '../features/team/TeamList'
 import styles from './Main.module.css'
 
 export default function Main() {
+  document.title = settings?.team?.name
+  const members = settings?.team?.members
+
   const isMobileLayout = createMediaQuery('(max-width: 825px)') // Добавлена закрывающая скобка
 
   const [selectedMember, setSelectedMember] = createSignal(null) // Объединяем в одно состояние
@@ -41,7 +43,10 @@ export default function Main() {
             />
           </Show>
 
-          <Show when={selectedMember()} fallback={<h3 class={styles.helloBlock}>{settings.team.introduction}</h3>}>
+          <Show
+            when={selectedMember()}
+            fallback={<h3 class={styles.helloBlock}>{settings.team.introduction}</h3>}
+          >
             <AboutBlock member={selectedMember()} onButtonClick={backButtonClick} />
           </Show>
         </div>
@@ -51,7 +56,9 @@ export default function Main() {
         <ProductsGrid onMemberSelect={handleSelect} />
       </section>
       <footer class="block">
-        <h4>&copy; NEW-DEVS.RU 2025</h4>
+        <h4>
+          &copy; {window.location.hostname} {new Date().getFullYear()}
+        </h4>
       </footer>
     </>
   )
