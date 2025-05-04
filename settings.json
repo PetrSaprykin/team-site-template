@@ -1,0 +1,152 @@
+{
+    "team": {
+      "name": "New Devs",
+      "introduction": "Мы - команда разработчиков из Московского политехнического университета. На этом сайте вы сможете найти все совместные проекты, а также контакты каждого отдельного участника",
+      "members": [
+        {
+          "id": 0,
+          "name": ["Сапрыкин", "Пётр", "Иванович"],
+          "role": "frontend-developer",
+          "image": "/images/membersPhotos/petr.png",
+          "contacts": {
+            "email": "saprykin@new-devs.ru",
+            "phone": "+7 (905) 688-27-76",
+            "site": "saprykin.su",
+            "telegram": "easyforpapizzi",
+            "github": "PetrSaprykin"
+          },
+          "skills": "JavaScript, HTML, CSS, SolidJS, C++, DiscordJS, SCSS, NodeJS, Electron, YoutubeAPI",
+          "about": "С программированием познакомился в 7-классе, начинал с вёрстки простых лендингов, постепенно осваивая HTML и CSS. Позже занялся изучением JavaScript, а так же немного работал с NodeJS, писал Discord и Telegram ботов. Один telegram-бот в 2022 году отправился на областной конкурс проектов, на котором занял второе место. Так же проходил небольшие курсы по введению в программирование на С++ в школе Стратегия. В данный момент обучаюсь в Московском политехе по специальности \"Системная и программная инженерия\"."
+        },
+        {
+          "id": 1,
+          "name": ["Деев", "Егор", "Викторович"],
+          "role": "backend-developer",
+          "image": "/images/membersPhotos/egor.png",
+          "contacts": {
+            "email": "deev@new-devs.ru",
+            "phone": "+7 (999) 373-77-37",
+            "site": "deev.space",
+            "telegram": "egor_deev",
+            "github": "IGlek"
+          },
+          "skills": "Python, C++, Nginx, gRPC, Docker, Kubernetes, Git, PostgreSQL, SQLite, QT, WinSCP, PyQT, Aiogram, Asyncio, Django, PyGame",
+          "about": "Программирую с 15 лет. Начал свой путь с обучения в Яндекс Лицее, регулярно повышаю навыки в программировании на сторонних ресурсах и в личных проектах. В университете на проектной деятельности являюсь руководителем команды разработки на Python, также сейчас занимаюсь разработкой сервера и сайта для ЦНИИ русского жестового языка. Занимаюсь парсингом, написанием различных скриптов, в том числе с использованием AI технологий. Люблю сталкиваться с неочевидными проблемами и решать их при помощи логики и кода."
+        },
+        {
+          "id": 2,
+          "name": ["Ночной", "Максим", "Сергеевич"],
+          "role": "backend-developer",
+          "image": "/images/membersPhotos/maks.png",
+          "skills": "Java, Python, Go, Docker, PostgreSQL, C++, C#, Discord, Slack",
+          "contacts": {
+            "email": "nochnoy@new-devs.ru",
+            "phone": null,
+            "site": null,
+            "telegram": "M_N1ght",
+            "github": "MN1ght"
+          },
+          "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        },
+        {
+          "id": 3,
+          "name": ["Старков", "Руслан", "Владимирович"],
+          "role": "backend-developer",
+          "image": "/images/membersPhotos/ruslan.png",
+          "skills": "Java, Python, Go, Docker, PostgreSQL, C++, C#, Discord, Slack, Unity, VSCode, Brain, Kubernetus",
+          "contacts": {
+            "email": "starkov@new-devs.ru",
+            "phone": "+7 (978) 732-43-48",
+            "site": null,
+            "telegram": "Poems_of_Ray",
+            "github": "RayStar-k"
+          },
+          "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex."
+        },
+        {
+          "id": 4,
+          "name": ["Пахалюк", "Илья", "Николаевич"],
+          "role": "ML-developer",
+          "image": "/images/membersPhotos/ilya.png",
+          "skills": "Python, Go, Docker, PostgreSQL, C++, Discord",
+          "contacts": {
+            "email": "pahaluyk@new-devs.ru",
+            "phone": "+7 (915) 109-54-54",
+            "site": null,
+            "telegram": "ilyaPahaluyk",
+            "github": "Starkcrimea"
+          },
+          "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex."
+        }
+      ]
+    },
+    "products": [
+      {
+        "id": 0,
+        "name": "EasyWeek",
+        "stack": ["C++", "Qt", "Docker", "Doxygen"],
+        "about": "Приложение для автоматического составления индивидуального меню на неделю с учетом вкусовых предпочтений пользователя и желательного размера закладываемых средств на еду",
+        "members": {
+          "0": "client",
+          "1": "teamlead",
+          "2": "backend",
+          "3": "server",
+          "4": "docker"
+        },
+        "icon": "/images/productIcons/easyweek.png",
+        "link": "https://github.com/New-Ds/Easy-Week"
+      },
+      {
+        "id": 1,
+        "name": "Сайт harlamenkov.ru",
+        "stack": ["Astroid", "Joomla", "CSS", "JS"],
+        "about": "Разработали по заказу сайт директора ЦНИИ Русского жестового языка Харламенкова А.Е.",
+        "members": {
+          "0": "frontend",
+          "1": "analyst",
+          "2": "joomla"
+        },
+        "icon": "/images/productIcons/site.svg",
+        "link": "https://rph.new-devs.ru"
+      },
+      {
+        "id": 2,
+        "name": "Сайт new-devs.ru",
+        "stack": ["SolidJS", "HTML", "CSS", "Vite"],
+        "about": "Сайт команды New Devs, создан frontend-разработчиком команды",
+        "members": {
+          "0": "lead"
+        },
+        "icon": "/images/productIcons/newdevs.png",
+        "link": "https://new-devs.ru"
+      },
+      {
+        "id": 3,
+        "name": "EasyAccess",
+        "stack": ["Python", "SolidJS", "Go", "Supabase"],
+        "about": "Браузерное расширение для обеспечения доступности веб-сайтов для лиц с ОВЗ",
+        "members": {
+          "0": "frontend",
+          "1": "backend",
+          "2": "backend",
+          "3": "QA",
+          "4": "QA"
+        },
+        "icon": "/images/productIcons/easyaccess.svg",
+        "link": "https://github.com/easyaccess-team/easyaccess-extension"
+      },
+      {
+        "id": 4,
+        "name": "Dormitorium",
+        "stack": ["Python", "PyGame"],
+        "about": "Визуальная пиксельная новелла про общежитие с элементами хоррора и простой шутерной составляющей",
+        "members": {
+          "0": "backend",
+          "1": "backend",
+          "3": "game-designer"
+        },
+        "icon": "/images/productIcons/dormitorium.jpg",
+        "link": "https://github.com/IGlek/Dormitorium"
+      }
+    ]
+  }

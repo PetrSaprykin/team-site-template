@@ -3,8 +3,9 @@ import './../shared/styles/global.css'
 import { createMediaQuery } from '@solid-primitives/media'
 import { createSignal, Show } from 'solid-js'
 
-import introText from '../../introducing'
-import members from '../../members'
+import settings from '/settings.json' with { type: 'json' };
+const members = settings.team.members;
+
 import AboutBlock from '../features/about/AboutBlock'
 import ProductsGrid from '../features/products/ProductsGrid'
 import TeamList from '../features/team/TeamList'
@@ -30,7 +31,7 @@ export default function Main() {
   return (
     <>
       <section class={styles.mainSection}>
-        <h1 class={styles.mainSectionTitle}>Команда New Devs</h1>
+        <h1 class={styles.mainSectionTitle}>{`Команда ${settings.team.name}`}</h1>
         <div class={styles.mainBlock} ref={mainBlock}>
           <Show when={!isMobileLayout() || !selectedMember()}>
             <TeamList
@@ -40,7 +41,7 @@ export default function Main() {
             />
           </Show>
 
-          <Show when={selectedMember()} fallback={<h3 class={styles.helloBlock}>{introText}</h3>}>
+          <Show when={selectedMember()} fallback={<h3 class={styles.helloBlock}>{settings.team.introduction}</h3>}>
             <AboutBlock member={selectedMember()} onButtonClick={backButtonClick} />
           </Show>
         </div>

@@ -4,7 +4,9 @@ import { Splide } from '@splidejs/splide'
 import { AutoScroll } from '@splidejs/splide-extension-auto-scroll'
 import { createEffect, For, onCleanup } from 'solid-js'
 
-import products from '../../../../products'
+import settings from '/settings.json' with { type: 'json' };
+
+const products = settings.products;
 import styles from './CardSlider.module.css'
 
 function getProductsByMemberId(memberId) {

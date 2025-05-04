@@ -1,8 +1,11 @@
 import '../../shared/styles/global.css'
 
 import { For } from 'solid-js'
+// Cascadia Mono прикольный шрифт
 
-import products from '../../../products'
+import settings from '/settings.json' with { type: 'json' };
+
+const products = settings.products;
 import ProductCard from './components/ProductCard'
 import styles from './ProductsGrid.module.css'
 

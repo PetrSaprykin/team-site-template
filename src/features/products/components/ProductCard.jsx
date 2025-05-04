@@ -1,8 +1,10 @@
 import { createEffect, createSignal, For, onMount } from 'solid-js'
 
-import members from '../../../../members'
+import settings from '/settings.json' with { type: 'json' };  // Современный синтаксис
 import Button from '../../../shared/components/Button/Button'
 import styles from './ProductCard.module.css'
+
+const members = settings.team.members;
 
 export default function ProductCard(props) {
   const [product, setProduct] = createSignal(null)
