@@ -8,13 +8,13 @@ const root = document.getElementById('root')
 
 document.title = settings?.team?.name
 
+// фикс для корректного отображения
+// учитывается высота адресной строки с помощью dvh в css и фикисируется высота контейнера
 document.addEventListener('DOMContentLoaded', () => {
   const main = document.querySelector('#main-section')
 
-  // Получаем текущую высоту в пикселях (уже вычисленную из 100dvh)
   const fixedHeight = main.clientHeight
 
-  // Заменяем 100dvh на фиксированное значение в px
   main.style.height = `${fixedHeight}px`
 })
 
