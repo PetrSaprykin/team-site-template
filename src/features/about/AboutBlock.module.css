@@ -125,13 +125,6 @@
     display: none;
 }
 
-@media (min-width: 1920px) {
-    .horizontalSliderBlock {
-        max-height: 90px;
-        height: 100%;
-    }
-}
-
 @media (max-width: 1280px) {
     .sections {
         max-height: 380px;
@@ -165,6 +158,7 @@
     .container {
         gap: var(--spacing-md);
         max-height: 100%;
+        height: unset;
     }
 }
 

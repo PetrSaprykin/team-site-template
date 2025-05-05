@@ -26,7 +26,7 @@
 }
 
 .cardImg {
-    width: 96px;
+    width: 86px;
     aspect-ratio: 1;
     margin-right: 5px;
     background-color: var(--bg-card);
@@ -130,13 +130,4 @@
     .name {
         font-size: 22px;
     }
-}
-
-@media (max-width: 615px) {
-    /* .cardImg {
-        width: 66px;
-    } */
-    /* .name {
-        font-size: 20px;
-    } */
 }

@@ -1,8 +1,11 @@
 /* Main.module.css */
 /* пофиксить высоту  */
+
+section {
+    min-height: 100dvh;
+}
 .mainSection {
     width: 100%;
-    height: 100dvh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,7 +34,6 @@
 
 .productsSection {
     width: 100%;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -60,12 +62,6 @@ footer {
 footer h4 {
     vertical-align: middle;
     text-transform: uppercase;
-}
-
-@media (min-width: 1921px) {
-    .mainBlock {
-        height: 600px;
-    }
 }
 
 @media (max-width: 1595px) {

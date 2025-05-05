@@ -46,7 +46,7 @@
 }
 
 .productCard img {
-    height: 90%;
+    height: 48px;
     aspect-ratio: 1;
     border-radius: var(--border-radius);
 }
@@ -156,7 +156,7 @@
     }
     .productCard {
         max-height: 75px;
-        width: 100%;
+        width: 175px;
         min-width: unset;
         padding: var(--spacing-sm) var(--spacing-md);
         background: none;
