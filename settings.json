@@ -7,7 +7,7 @@
         "id": 0,
         "name": ["Сапрыкин", "Пётр", "Иванович"],
         "role": "frontend-developer",
-        "image": "/images/membersPhotos/petr.png",
+        "image": "/images/membersPhotos/petr.webp",
         "contacts": {
           "email": "saprykin@new-devs.ru",
           "phone": "+7 (905) 688-27-76",
@@ -37,7 +37,7 @@
         "id": 1,
         "name": ["Деев", "Егор", "Викторович"],
         "role": "backend-developer",
-        "image": "/images/membersPhotos/egor.png",
+        "image": "/images/membersPhotos/egor.webp",
         "contacts": {
           "email": "deev@new-devs.ru",
           "phone": "+7 (999) 373-77-37",
@@ -69,7 +69,7 @@
         "id": 2,
         "name": ["Ночной", "Максим", "Сергеевич"],
         "role": "backend-developer",
-        "image": "/images/membersPhotos/maks.png",
+        "image": "/images/membersPhotos/maks.webp",
         "skills": ["Python", "C++", "PostgreSQL", "SQLite", "QT", "Telebot", "Aiogram", "WinSCP"],
         "contacts": {
           "email": "nochnoy@new-devs.ru",
@@ -84,7 +84,7 @@
         "id": 3,
         "name": ["Старков", "Руслан", "Владимирович"],
         "role": "backend-developer",
-        "image": "/images/membersPhotos/ruslan.png",
+        "image": "/images/membersPhotos/ruslan.webp",
         "skills": ["C++", "Python", "Qt", "Git", "STL"],
         "contacts": {
           "email": "starkov@new-devs.ru",
@@ -99,7 +99,7 @@
         "id": 4,
         "name": ["Пахалюк", "Илья", "Николаевич"],
         "role": "ML-engineer",
-        "image": "/images/membersPhotos/ilya.png",
+        "image": "/images/membersPhotos/ilya.webp",
         "skills": [
           "Python",
           "PyTorch",
@@ -134,7 +134,7 @@
         "3": "server",
         "4": "docker"
       },
-      "icon": "/images/productIcons/easyweek.png",
+      "icon": "/images/productIcons/easyweek.webp",
       "link": "https://github.com/New-Ds/Easy-Week"
     },
     {
@@ -158,7 +158,7 @@
       "members": {
         "0": "lead"
       },
-      "icon": "/images/productIcons/newdevs.png",
+      "icon": "/images/productIcons/newdevs.webp",
       "link": "https://new-devs.ru"
     },
     {
@@ -186,7 +186,7 @@
         "1": "backend",
         "3": "game-design"
       },
-      "icon": "/images/productIcons/dormitorium.jpg",
+      "icon": "/images/productIcons/dormitorium.webp",
       "link": "https://github.com/IGlek/Dormitorium"
     }
   ]
