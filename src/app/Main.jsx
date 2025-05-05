@@ -10,8 +10,9 @@ import ProductsGrid from '../features/products/ProductsGrid'
 import TeamList from '../features/team/TeamList'
 import styles from './Main.module.css'
 
+
+
 export default function Main() {
-  document.title = settings?.team?.name
   const members = settings?.team?.members
 
   const isMobileLayout = createMediaQuery('(max-width: 825px)') // Добавлена закрывающая скобка
@@ -32,7 +33,7 @@ export default function Main() {
 
   return (
     <>
-      <section class={styles.mainSection}>
+      <section class={styles.mainSection} id="main-section">
         <h1 class={styles.mainSectionTitle}>{`Команда ${settings.team.name}`}</h1>
         <div class={styles.mainBlock} ref={mainBlock}>
           <Show when={!isMobileLayout() || !selectedMember()}>
