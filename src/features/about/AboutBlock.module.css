@@ -55,6 +55,7 @@
 }
 
 .rightSection {
+    flex: 1;
     display: flex;
     flex-direction: column;
     min-height: 100%;
@@ -147,11 +148,18 @@
     }
     .siteLinkRow {
         position: absolute;
+        display: flex;
+        align-items: center;
         width: 100%;
         bottom: 0;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+    }
+
+    .siteLinkRow a {
+        margin-left: var(--spacing-sm);
+        padding: 0 var(--spacing-sm);
     }
 
     .sections {

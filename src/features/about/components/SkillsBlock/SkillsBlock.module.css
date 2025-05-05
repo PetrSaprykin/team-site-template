@@ -35,16 +35,16 @@
         height: fit-content;
         flex-grow: unset;
     }
-}
 
-@media (max-height: 740px) {
-    .skillsBlock {
-        max-height: 65px;
+    @media (max-height: 740px) {
+        .skillsBlock {
+            max-height: 65px;
+        }
     }
-}
 
-@media (max-height: 640px) {
-    .skillsBlock {
-        max-height: 45px;
+    @media (max-height: 640px) {
+        .skillsBlock {
+            max-height: 45px;
+        }
     }
 }
