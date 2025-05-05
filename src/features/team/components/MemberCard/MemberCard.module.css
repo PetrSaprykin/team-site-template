@@ -14,7 +14,6 @@
     transform-origin: center;
 }
 
-
 .selectedCard {
     transform: scale(1.05);
     border: 1px solid var(--accent-blue);
@@ -25,10 +24,6 @@
     position: absolute;
     left: -30px;
 }
-
-
-
-
 
 .cardImg {
     width: 96px;
@@ -78,11 +73,11 @@
 @media (max-width: 1920px) {
     .cardImg {
         width: 86px;
-    }   
+    }
 }
 
 @media (min-width: 1280px) {
-    .card:hover .selectTag{
+    .card:hover .selectTag {
         transition: var(--transition);
         opacity: 1;
     }
@@ -93,7 +88,7 @@
         width: 76px;
     }
     .card {
-        padding: calc(var(--spacing-sm))
+        padding: calc(var(--spacing-sm));
     }
     .selectedCard {
         transform: scale(1.03);

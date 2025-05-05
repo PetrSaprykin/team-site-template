@@ -1,139 +1,136 @@
 /* Main.module.css */
 /* пофиксить высоту  */
 .mainSection {
-  width: 100%;
-  height: 100dvh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+    width: 100%;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .mainSectionTitle {
-  text-align: center;
-  margin-bottom: var(--spacing-lg);
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
 }
 
 .mainBlock {
-  width: 100%;
-  height: 550px;
-  display: flex;
-  justify-content: center;
-  gap: calc(var(--spacing-xl) - 10px);
+    width: 100%;
+    height: 550px;
+    display: flex;
+    justify-content: center;
+    gap: calc(var(--spacing-xl) - 10px);
 }
 
 .helloBlock {
-  text-align: center;
-  display: flex;
-  align-items: center;
-  max-width: 900px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    max-width: 900px;
 }
 
 .productsSection {
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
 }
 
 .productSectionTitle {
-  padding-top: 60px;
-  text-align: center;
+    padding-top: 60px;
+    text-align: center;
 }
 
-
-
 footer {
-  position: absolute;
-  width: 100%;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  height: 60px;
-  border-radius: 0 !important;
-  border: none !important;
-  border-top: var(--border) !important;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 60px;
+    border-radius: 0 !important;
+    border: none !important;
+    border-top: var(--border) !important;
 }
 
 footer h4 {
-  vertical-align: middle;
-  text-transform: uppercase;
+    vertical-align: middle;
+    text-transform: uppercase;
 }
 
 @media (min-width: 1921px) {
-  .mainBlock {
-    height: 600px;
-  }
+    .mainBlock {
+        height: 600px;
+    }
 }
 
 @media (max-width: 1595px) {
-  .mainBlock {
-    max-height: 550px;
-  }
+    .mainBlock {
+        max-height: 550px;
+    }
 }
 
 @media (max-width: 1280px) {
-  .mainBlock {
-    height: auto;
-    gap: var(--spacing-lg);
-    max-width: 1200px;
-    max-height: 478px;
-  }
+    .mainBlock {
+        height: auto;
+        gap: var(--spacing-lg);
+        max-width: 1200px;
+        max-height: 478px;
+    }
 }
 
 @media (max-width: 1100px) {
-
 }
 
 @media (max-width: 960px) {
-  .mainBlock {
-    max-height: 480px;
-  }
+    .mainBlock {
+        max-height: 480px;
+    }
 }
 
 @media (max-width: 825px) {
-  .helloBlock {
-    max-width: 500px;
-    padding: var(--spacing-sm);
-    margin: 1% 0;
-  }
-  .mainBlock {
-    flex-direction: column-reverse;
-    justify-content: flex-end;
-    align-items: center;
-    max-width: 950px;
-    width: fit-content;
-    max-height: unset;
-  }
-  .mainSectionTitle {
-    margin-bottom: var(--spacing-sm);
-  }
+    .helloBlock {
+        max-width: 500px;
+        padding: var(--spacing-sm);
+        margin: 1% 0;
+    }
+    .mainBlock {
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        align-items: center;
+        max-width: 950px;
+        width: fit-content;
+        max-height: unset;
+    }
+    .mainSectionTitle {
+        margin-bottom: var(--spacing-sm);
+    }
 }
 
 @media (max-width: 570px) {
-  .mainSectionTitle {
-    margin: var(--spacing-md) 0;
-  }
-  .mainBlock {
-    max-height: unset;
-    height: auto;
-    min-height: 0;
-    margin-bottom: var(--spacing-lg);
-  }
-  .mainBlock.mobileOpened {
-    flex: 1;
-  }
-  .productSectionTitle {
-    font-size: calc(var(--font-size) * 2.4);
-  }
+    .mainSectionTitle {
+        margin: var(--spacing-md) 0;
+    }
+    .mainBlock {
+        max-height: unset;
+        height: auto;
+        min-height: 0;
+        margin-bottom: var(--spacing-lg);
+    }
+    .mainBlock.mobileOpened {
+        flex: 1;
+    }
+    .productSectionTitle {
+        font-size: calc(var(--font-size) * 2.4);
+    }
 }
 
 @media (max-width: 440px) {
-  .mainSectionTitle {
-    margin-top: var(--spacing-lg);
-  }
+    .mainSectionTitle {
+        margin-top: var(--spacing-lg);
+    }
 }

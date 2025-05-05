@@ -1,18 +1,37 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @import './theme.css';
 @import './reset.css';
 
 body {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: flex-start;
     font-family: var(--font-main);
     font-size: var(--font-size);
     color: var(--primary-light);
     background-color: var(--bg-color);
     font-weight: 350;
+    background-image:
+        -o-radial-gradient(at 80% 20%, rgba(58, 134, 255, 0.15) 0px, transparent 50%),
+        -o-radial-gradient(at 20% 80%, rgba(76, 201, 240, 0.15) 0px, transparent 50%);
     background-image:
         radial-gradient(at 80% 20%, rgba(58, 134, 255, 0.15) 0px, transparent 50%),
         radial-gradient(at 20% 80%, rgba(76, 201, 240, 0.15) 0px, transparent 50%);
@@ -24,7 +43,7 @@ body {
 }
 
 *::-webkit-scrollbar {
-    width: 12px;               /* ширина всей полосы прокрутки */
+    width: 12px; /* ширина всей полосы прокрутки */
 }
 *::-webkit-scrollbar-track {
     margin: 6px 0;
@@ -56,11 +75,15 @@ p {
 
 a {
     font-size: var(--font-size);
+    -webkit-transition: var(--transition);
+    -o-transition: var(--transition);
     transition: var(--transition);
 }
 
 a:hover {
     color: var(--primary-light);
+    -webkit-transition: var(--transition);
+    -o-transition: var(--transition);
     transition: var(--transition);
 }
 
@@ -74,7 +97,7 @@ h6 {
 }
 
 h1 {
-    font-size: calc(var(--font-size) * 2.750);
+    font-size: calc(var(--font-size) * 2.75);
     color: var(--primary-light);
 }
 
@@ -84,7 +107,7 @@ h2 {
 }
 
 h3 {
-    font-size: calc(var(--font-size) * 1.350);
+    font-size: calc(var(--font-size) * 1.35);
 }
 h4 {
     font-size: calc(var(--font-size) * 1.175);
@@ -94,9 +117,11 @@ h4 {
 
 .block {
     background: var(--bg-card);
+    -webkit-backdrop-filter: var(--filter);
     backdrop-filter: var(--filter);
     border: var(--border);
     border-radius: var(--border-radius);
+    -webkit-box-shadow: var(--shadow);
     box-shadow: var(--shadow);
 }
 
@@ -117,7 +142,7 @@ h4 {
         padding: 0 var(--spacing-md);
     }
     h2 {
-        font-size: calc(var(--font-size) * 1.850);
+        font-size: calc(var(--font-size) * 1.85);
     }
     h4 {
         font-size: calc(var(--font-size) * 0.9);
@@ -129,6 +154,6 @@ h4 {
         padding: 0 var(--spacing-md);
     }
     h2 {
-        font-size: calc(var(--font-size) * 1.500);
+        font-size: calc(var(--font-size) * 1.5);
     }
 }

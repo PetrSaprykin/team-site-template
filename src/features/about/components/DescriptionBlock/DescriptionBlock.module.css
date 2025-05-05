@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .textBlock {
     max-width: 100%;
     width: 100%;
@@ -18,8 +25,12 @@
 
 @media (max-width: 570px) {
     .textBlock {
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
         flex: 1;
         min-height: 60px;
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
         height: fit-content;
     }
 }

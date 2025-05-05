@@ -1,28 +1,47 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .productCard {
     height: 100%;
     min-width: 260px;
     width: 260px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     cursor: pointer;
     gap: var(--spacing-md);
     padding: var(--spacing-md);
     background: var(--bg-card);
+    -webkit-backdrop-filter: var(--filter);
     backdrop-filter: var(--filter);
     border: var(--border);
     border-radius: var(--border-radius);
+    -webkit-box-shadow: inset var(--shadow);
     box-shadow: inset var(--shadow);
+    -webkit-transition: var(--transition);
+    -o-transition: var(--transition);
     transition: var(--transition);
 }
 
 .productCard:hover {
     width: 100%;
     border: 1px solid var(--accent-blue);
+    -webkit-transition: var(--transition);
+    -o-transition: var(--transition);
     transition: var(--transition);
     background: var(--bg-color);
 }
 
 .productCard:hover .about {
+    max-width: -webkit-fit-content;
+    max-width: -moz-fit-content;
     max-width: fit-content;
 }
 
@@ -34,25 +53,39 @@
 
 .about {
     max-width: calc(100% - 60px);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     height: 100%;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
     overflow: hidden;
 }
 
 .productName {
     white-space: nowrap;
+    -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
     overflow: hidden;
+    min-height: -webkit-fit-content;
+    min-height: -moz-fit-content;
     min-height: fit-content;
     color: var(--primary-light);
+    -webkit-transition: var(--transition);
+    -o-transition: var(--transition);
     transition: var(--transition);
 }
 
 .role {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     white-space: nowrap;
+    -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
     font-size: calc(var(--font-size) * 0.85);
     font-family: var(--font-code);
@@ -65,6 +98,8 @@
 .splide {
     height: 100%;
     overflow: visible;
+    -webkit-transition: var(--transition);
+    -o-transition: var(--transition);
     transition: var(--transition);
 }
 
@@ -82,6 +117,7 @@
 }
 
 .splidePagination {
+    -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
     position: unset;
 }
@@ -96,7 +132,11 @@
     }
     .splide {
         width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
         height: 90px;
         margin: 0 var(--spacing-sm);
@@ -106,7 +146,11 @@
     }
     .slide {
         width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
         overflow: hidden;
     }
@@ -122,7 +166,11 @@
         white-space: wrap;
     }
     .about {
+        width: -webkit-max-content;
+        width: -moz-max-content;
         width: max-content;
+        height: -webkit-min-content;
+        height: -moz-min-content;
         height: min-content;
     }
     .splidePagination {
@@ -144,6 +192,8 @@
 
     .productCard {
         width: 200px;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
         justify-content: flex-start;
         padding: var(--spacing-md) var(--spacing-sm);
     }
@@ -151,6 +201,8 @@
         padding: var(--spacing-xs) 0;
         gap: 2px;
         width: 100%;
+        height: -webkit-min-content;
+        height: -moz-min-content;
         height: min-content;
     }
 }
@@ -158,6 +210,8 @@
 @media (hover: none) {
     .productCard:hover {
         border: 1px solid var(--accent-blue);
+        -webkit-transition: var(--transition);
+        -o-transition: var(--transition);
         transition: var(--transition);
         background: var(--bg-color);
 

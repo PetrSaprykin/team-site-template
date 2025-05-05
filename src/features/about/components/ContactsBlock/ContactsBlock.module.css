@@ -1,23 +1,44 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .contactsBlock {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     gap: 5px;
     padding: calc(var(--spacing-sm) + 3px);
     background: var(--bg-card);
+    -webkit-backdrop-filter: var(--filter);
     backdrop-filter: var(--filter);
     border: var(--border);
     border-radius: var(--border-radius);
+    -webkit-box-shadow: var(--shadow);
     box-shadow: var(--shadow);
 }
 
 .contactsRow {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     gap: 5px;
 }
 
 .contactItem {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     gap: 3px;
     padding: var(--spacing-xs) calc(var(--spacing-sm) + 2px);
@@ -34,6 +55,7 @@
     margin-bottom: 3px;
     white-space: nowrap;
     overflow: hidden;
+    -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
     color: var(--accent-blue);
 }
@@ -66,12 +88,14 @@
 
 @media (max-width: 395px) {
     .contactsRow {
+        -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
     }
 }
 
 @media (max-width: 365px) {
     .contactsRow {
+        -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     }
 }

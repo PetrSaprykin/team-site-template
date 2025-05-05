@@ -1,10 +1,10 @@
 import { For } from 'solid-js'
 
-import settings from '/settings.json' with { type: 'json' };
+import settings from '/settings.json' with { type: 'json' }
 import MemberCard from './components/MemberCard/MemberCard'
 import styles from './TeamList.module.css'
 
-const team = settings.team.members;
+const team = settings.team.members
 
 export default function (props) {
   return (

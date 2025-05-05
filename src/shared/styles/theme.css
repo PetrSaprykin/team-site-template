@@ -2,11 +2,11 @@
     --primary-dark: rgba(224, 227, 231, 0.8);
     --primary-light: #e7e6e6;
     --accent-blue: #0062ff;
-    --bg-color: #121a24;    
+    --bg-color: #121a24;
     --bg-section: rgba(160, 194, 250, 0.15);
     --bg-card: rgba(26, 32, 44, 0.655);
     --border: 1px solid rgba(255, 255, 255, 0.156);
-    --shadow: 0 4px 20px rgba(0, 0, 0, .3);
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     --filter: saturate(80%);
 
     --border-radius: 10px;
@@ -17,8 +17,8 @@
     --spacing-lg: 15px;
     --spacing-xl: 30px;
 
-    --font-main: "Noto Sans", sans-serif;
-    --font-code: "Consolas", monospace;
+    --font-main: 'Noto Sans', sans-serif;
+    --font-code: 'Consolas', monospace;
     --font-size: 16px;
 
     --icon-size-sm: 18px;
@@ -28,8 +28,6 @@
     --transition: all 0.275s ease;
 }
 
-
-
 @media (max-width: 2560px) {
     :root {
         --font-size: 20px;
@@ -37,7 +35,7 @@
 }
 
 @media (max-width: 1920px) {
-    :root { 
+    :root {
         --font-size: 18px;
     }
 }

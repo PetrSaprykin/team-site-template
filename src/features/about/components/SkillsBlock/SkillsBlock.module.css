@@ -1,4 +1,13 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .skillsBlock {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
     flex-grow: 1;
     min-height: 45px;
     height: 100%;
@@ -8,14 +17,21 @@
 
 .skillsList {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     gap: var(--spacing-sm);
 }
 
 .skillsList li {
     font-family: var(--font-code);
+    height: -webkit-min-content;
+    height: -moz-min-content;
     height: min-content;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     padding: calc(var(--spacing-xs) - 1px) var(--spacing-sm);
     background: var(--bg-card);
@@ -32,7 +48,11 @@
 @media (max-width: 570px) {
     .skillsBlock {
         max-height: 125px;
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
         height: fit-content;
+        -webkit-box-flex: unset;
+        -ms-flex-positive: unset;
         flex-grow: unset;
     }
 

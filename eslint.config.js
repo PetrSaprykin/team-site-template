@@ -22,6 +22,10 @@ export default defineConfig([
         ...globals.es2025,
       },
     },
+    env: {
+      browser: true,
+      es2025: true,
+    },
   },
 
   // JS

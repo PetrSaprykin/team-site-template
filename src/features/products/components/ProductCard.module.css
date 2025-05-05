@@ -1,18 +1,43 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .productCard {
     width: 100%;
     max-width: 480px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     gap: var(--spacing-lg);
     padding: var(--spacing-md);
     background-color: var(--bg-section);
+    -webkit-transition: var(--transition);
+    -o-transition: var(--transition);
     transition: var(--transition);
     scroll-margin-top: 90px;
 }
 
 :global(.flash-card) {
+    -webkit-animation: flash 0.5s ease-in-out 3;
     animation: flash 0.5s ease-in-out 3;
     border-color: transparent;
+}
+
+@-webkit-keyframes flash {
+    0%,
+    100% {
+        outline: 3px solid transparent;
+    }
+    50% {
+        outline: 3px solid var(--accent-blue);
+    }
 }
 
 @keyframes flash {
@@ -26,15 +51,25 @@
 }
 
 .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     gap: 15px;
 }
 .logo {
     width: 56px;
     height: 56px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     border-radius: var(--border-radius);
 }
@@ -46,29 +81,47 @@
 }
 
 .productInfo {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 
 .description {
     color: var(--primary-light);
     white-space: pre-line;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
     flex: 1;
 }
 .teamTitle {
     font-weight: normal;
+    -webkit-transform: translateY(5px);
+    -ms-transform: translateY(5px);
     transform: translateY(5px);
 }
 .team {
+    display: -ms-grid;
     display: grid;
     height: 200px;
+    -ms-grid-columns: 1fr var(--spacing-md) 1fr;
     grid-template-columns: 1fr 1fr;
     gap: var(--spacing-md);
+    -ms-flex-line-pack: start;
     align-content: flex-start;
 }
 .member {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     gap: var(--spacing-md);
     height: 60px;
@@ -76,6 +129,8 @@
     padding: 6px 8px;
     border-radius: var(--border-radius);
     border: var(--border);
+    -webkit-transition: var(--transition);
+    -o-transition: var(--transition);
     transition: var(--transition);
     cursor: pointer;
 }
@@ -91,6 +146,7 @@
     height: 44px;
     background-color: #4b5563;
     border-radius: var(--border-radius);
+    -ms-flex-negative: 0;
     flex-shrink: 0;
 }
 .avatar img {
@@ -99,7 +155,12 @@
     border-radius: var(--border-radius);
 }
 .memberInfo {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
 }
 .memberName {
@@ -108,6 +169,8 @@
 .memberRole {
     font-family: var(--font-code);
     color: var(--accent-blue);
+    -webkit-transition: var(--transition);
+    -o-transition: var(--transition);
     transition: var(--transition);
 }
 .button {
@@ -116,6 +179,8 @@
     border: var(--border);
     color: var(--accent-blue);
     border-radius: var(--border-radius);
+    -webkit-transition: var(--transition);
+    -o-transition: var(--transition);
     transition: var(--transition);
 }
 .button:hover {

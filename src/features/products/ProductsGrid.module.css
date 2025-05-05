@@ -1,22 +1,35 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .productsGrid {
-  flex: 0 1;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: clamp(16px, 1vw, 30px);
-  padding: var(--spacing-xl) 0;
-  justify-items: center;
-  width: 100%;
-  max-width: 1390px;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1;
+    flex: 0 1;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr clamp(16px, 1vw, 30px) 1fr clamp(16px, 1vw, 30px) 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(16px, 1vw, 30px);
+    padding: var(--spacing-xl) 0;
+    justify-items: center;
+    width: 100%;
+    max-width: 1390px;
 }
 
 @media (max-width: 1145px) {
-  .productsGrid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+    .productsGrid {
+        -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 768px) {
-  .productsGrid {
-    grid-template-columns: repeat(1, 1fr);
-  }
+    .productsGrid {
+        -ms-grid-columns: 1fr;
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
