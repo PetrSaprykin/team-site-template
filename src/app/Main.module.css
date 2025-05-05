@@ -1,10 +1,8 @@
 /* Main.module.css */
 /* пофиксить высоту  */
 
-section {
-    min-height: 100dvh;
-}
 .mainSection {
+    height: 100svh;
     width: 100%;
     display: flex;
     flex-direction: column;

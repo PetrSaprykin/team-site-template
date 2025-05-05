@@ -197,6 +197,9 @@
         justify-content: flex-start;
         padding: var(--spacing-md) var(--spacing-sm);
     }
+    .productCard img {
+        height: 36px;
+    }
     .about {
         padding: var(--spacing-xs) 0;
         gap: 2px;

@@ -1,7 +1,7 @@
 import './../shared/styles/global.css'
 
 import { createMediaQuery } from '@solid-primitives/media'
-import { createSignal, Show } from 'solid-js'
+import { createSignal, Show, onMount, createEffect } from 'solid-js'
 
 import settings from '/settings.json' with { type: 'json' }
 
@@ -10,12 +10,12 @@ import ProductsGrid from '../features/products/ProductsGrid'
 import TeamList from '../features/team/TeamList'
 import styles from './Main.module.css'
 
-
+document.addEventListener('DOMContentLoaded', () => {})
 
 export default function Main() {
   const members = settings?.team?.members
 
-  const isMobileLayout = createMediaQuery('(max-width: 825px)') // Добавлена закрывающая скобка
+  const isMobileLayout = createMediaQuery('(max-width: 825px)')
 
   const [selectedMember, setSelectedMember] = createSignal(null) // Объединяем в одно состояние
 
@@ -33,7 +33,7 @@ export default function Main() {
 
   return (
     <>
-      <section class={styles.mainSection} id="main-section">
+      <section class={styles.mainSection}>
         <h1 class={styles.mainSectionTitle}>{`Команда ${settings.team.name}`}</h1>
         <div class={styles.mainBlock} ref={mainBlock}>
           <Show when={!isMobileLayout() || !selectedMember()}>
