@@ -99,3 +99,9 @@
         flex-wrap: wrap;
     }
 }
+
+@media (prefers-color-scheme: light) {
+    .contactItem {
+        background: var(--bg-card-light);
+    }
+}

@@ -98,7 +98,6 @@ h6 {
 
 h1 {
     font-size: calc(var(--font-size) * 2.75);
-    color: var(--primary-light);
 }
 
 h2 {
@@ -155,5 +154,27 @@ h4 {
     }
     h2 {
         font-size: calc(var(--font-size) * 1.5);
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    body {
+        color: var(--primary-dark);
+    }
+    *::-webkit-scrollbar-thumb {
+        border-right: 1px solid #e9eaea;
+        border-left: 1px solid #e9eaea;
+    }
+
+    *::-webkit-scrollbar {
+        width: 6px;
+    }
+    *::-webkit-scrollbar-track {
+        margin: 6px 0;
+        border-radius: 30px;
+    }
+
+    body::-webkit-scrollbar {
+        width: 6px;
     }
 }

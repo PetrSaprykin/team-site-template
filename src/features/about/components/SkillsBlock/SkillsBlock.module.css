@@ -52,3 +52,9 @@
         max-height: 55px;
     }
 }
+
+@media (prefers-color-scheme: light) {
+    .skillsList li {
+        background: var(--bg-card-light);
+    }
+}

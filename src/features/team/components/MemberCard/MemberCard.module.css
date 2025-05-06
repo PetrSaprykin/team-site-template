@@ -131,3 +131,9 @@
         font-size: 22px;
     }
 }
+
+@media (prefers-color-scheme: light) {
+    .role {
+        background: var(--bg-card-light);
+    }
+}

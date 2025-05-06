@@ -251,3 +251,9 @@
         max-width: 108px;
     }
 }
+
+@media (prefers-color-scheme: light) {
+    .siteLinkRow a {
+        background: var(--bg-card-light);
+    }
+}

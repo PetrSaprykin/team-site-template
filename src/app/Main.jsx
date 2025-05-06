@@ -17,12 +17,12 @@ export default function Main() {
 
   const isMobileLayout = createMediaQuery('(max-width: 825px)')
 
-  const [selectedMember, setSelectedMember] = createSignal(null) // Объединяем в одно состояние
+  const [selectedMember, setSelectedMember] = createSignal(null)
 
   let mainBlock
 
   const handleSelect = (member) => {
-    setSelectedMember(member) // Устанавливаем сразу весь объект
+    setSelectedMember(member)
     mainBlock.classList.add(styles.mobileOpened)
   }
 

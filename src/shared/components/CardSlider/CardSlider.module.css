@@ -49,6 +49,7 @@
     height: 48px;
     aspect-ratio: 1;
     border-radius: var(--border-radius);
+    border: var(--border);
 }
 
 .about {
@@ -93,6 +94,7 @@
     background: var(--bg-card);
     border-radius: calc(var(--border-radius) * 0.5);
     color: var(--accent-blue);
+    transition: var(--transition);
 }
 
 .splide {
@@ -226,5 +228,21 @@
 
     .productCard:hover .about {
         max-width: calc(100% - 60px);
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    .productCard {
+        background: var(--bg-card);
+        box-shadow: none;
+    }
+    .productCard:hover {
+        background-color: var(--bg-card-light);
+        .role {
+            background-color: var(--bg-section);
+        }
+    }
+    .role {
+        background: var(--bg-card-light);
     }
 }
