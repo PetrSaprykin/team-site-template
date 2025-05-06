@@ -1,9 +1,7 @@
-// InfoBlock.tsx
 import '../../shared/styles/global.css'
 
 import { createMediaQuery } from '@solid-primitives/media'
 import { FaSolidHouseUser } from 'solid-icons/fa'
-import { Show } from 'solid-js'
 
 import Button from '../../shared/components/Button/Button'
 import CardSlider from '../../shared/components/CardSlider/CardSlider'
@@ -15,8 +13,8 @@ import SkillsBlock from './components/SkillsBlock/SkillsBlock'
 export default function AboutBlock(props) {
   const hasWebSite = () => props?.member?.contacts?.site
 
-  const isTablet = createMediaQuery('(max-width: 960px) and (min-width: 570px')
-  const isMobile = createMediaQuery('(max-width: 570px')
+  const isTablet = createMediaQuery('(max-width: 960px) and (min-width: 570px)')
+  const isMobile = createMediaQuery('(max-width: 570px)')
 
   return (
     <>
@@ -24,13 +22,12 @@ export default function AboutBlock(props) {
         <div class={styles.sections}>
           <div class={styles.leftSection}>
             <div class={`${styles.photoPlaceholder} block`}>
-              <img src={props?.member?.image} />
+              <img src={props?.member?.image} loading="lazy" />
             </div>
 
-            <Show when={!isMobile()}>
-              <SkillsBlock member={props.member} />
-            </Show>
-            <Show when={isTablet() && props?.member}>
+            {!isMobile() && <SkillsBlock member={props.member} />}
+
+            {isTablet() && props?.member && (
               <div class={`${styles.verticalSliderBlock} block`}>
                 <CardSlider
                   memberId={props?.member?.id}
@@ -43,37 +40,42 @@ export default function AboutBlock(props) {
                   }}
                 />
               </div>
-            </Show>
+            )}
           </div>
+
           <div class={styles.rightSection}>
-            <h2 class={`${styles.title} ${!hasWebSite() ? styles.single : ' '}`}>
+            <h2 class={`${styles.title} ${!hasWebSite() ? styles.single : ''}`}>
               {props?.member?.name.join(' ')}
             </h2>
 
-            <Show when={!isMobile()}>
-              <ContactsBlock member={props?.member} />
-            </Show>
+            {!isMobile() && <ContactsBlock member={props?.member} />}
 
-            <Show when={hasWebSite()}>
+            {hasWebSite() && (
               <p class={`${styles.siteLinkRow} block`}>
                 Веб-сайт{' '}
-                <a href={`https://${props?.member?.contacts?.site}`} target="blank">
+                <a
+                  href={`https://${props?.member?.contacts?.site}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   {props?.member?.contacts?.site}
                 </a>
               </p>
-            </Show>
+            )}
 
-            <Show when={!isMobile()}>
-              <DescriptionBlock content={props?.member?.about} />
-            </Show>
+            {!isMobile() && <DescriptionBlock content={props?.member?.about} />}
           </div>
         </div>
-        <Show when={isMobile()}>
-          <ContactsBlock member={props?.member} />
-          <SkillsBlock member={props?.member} />
-          <DescriptionBlock content={props?.member?.about} />
-        </Show>
-        <Show when={!isTablet()}>
+
+        {isMobile() && (
+          <div class={styles.mobileInfoLayout}>
+            <ContactsBlock member={props?.member} />
+            <SkillsBlock member={props?.member} />
+            <DescriptionBlock content={props?.member?.about} />
+          </div>
+        )}
+
+        {!isTablet() && (
           <div class={styles.horizontalSliderBlock}>
             <CardSlider
               memberId={props?.member?.id}
@@ -88,8 +90,9 @@ export default function AboutBlock(props) {
               }}
             />
           </div>
-        </Show>
+        )}
       </div>
+
       <Button class={styles.homeButton} onClick={() => props.onButtonClick()}>
         <FaSolidHouseUser size={35} />
       </Button>
