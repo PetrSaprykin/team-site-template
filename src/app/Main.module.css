@@ -1,12 +1,18 @@
-/* Main.module.css */
-/* пофиксить высоту  */
-
 .mainSection {
-    height: 100svh;
+    min-height: 100svh;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 
@@ -18,22 +24,37 @@
 .mainBlock {
     width: 100%;
     height: 550px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     gap: calc(var(--spacing-xl) - 10px);
 }
 
 .helloBlock {
     text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     max-width: 900px;
 }
 
 .productsSection {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     margin: 0;
 }
@@ -47,8 +68,14 @@ footer {
     position: absolute;
     width: 100%;
     left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     text-align: center;
     height: 60px;
@@ -93,10 +120,19 @@ footer h4 {
         margin: 1% 0;
     }
     .mainBlock {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
         flex-direction: column-reverse;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
         justify-content: flex-end;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
         max-width: 805px;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
         width: fit-content;
         max-height: unset;
     }
@@ -109,6 +145,10 @@ footer h4 {
     .mainSectionTitle {
         margin: var(--spacing-md) 0;
     }
+    .mainSection.mobileOpened {
+        height: 100svh;
+        min-height: unset;
+    }
     .mainBlock {
         max-height: unset;
         height: auto;
@@ -116,6 +156,8 @@ footer h4 {
         margin-bottom: var(--spacing-lg);
     }
     .mainBlock.mobileOpened {
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
         flex: 1;
     }
     .productSectionTitle {
@@ -126,5 +168,12 @@ footer h4 {
 @media (max-width: 440px) {
     .mainSectionTitle {
         margin-top: var(--spacing-lg);
+    }
+}
+
+@media (max-height: 600px) {
+    .mainSection {
+        min-height: 600px !important;
+        flex-shrink: 0;
     }
 }

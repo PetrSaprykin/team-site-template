@@ -1,20 +1,35 @@
 .card {
+    -ms-grid-column: 1;
     grid-column: 1;
+    max-height: -webkit-max-content;
+    max-height: -moz-max-content;
     max-height: max-content;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     cursor: pointer;
     background: var(--bg-section);
+    -webkit-backdrop-filter: var(--filter);
     backdrop-filter: var(--filter);
     border: var(--border);
     border-radius: var(--border-radius);
     padding: calc(var(--spacing-sm) + 2px);
+    -webkit-box-shadow: var(--shadow);
     box-shadow: var(--shadow);
+    -webkit-transition: var(--transition);
+    -o-transition: var(--transition);
     transition: var(--transition);
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
     transform-origin: center;
 }
 
 .selectedCard {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
     transform: scale(1.05);
     border: 1px solid var(--accent-blue);
 }
@@ -35,6 +50,7 @@
 .cardImg img {
     width: 100%;
     height: 100%;
+    -o-object-fit: cover;
     object-fit: cover;
     border-radius: var(--border-radius);
     border: var(--border);
@@ -42,8 +58,15 @@
 .cardInfo {
     max-width: 370px;
     height: 85%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     padding-right: var(--spacing-sm);
     margin-left: 5px;
@@ -54,11 +77,14 @@
     font-size: 24px;
     white-space: nowrap;
     overflow: hidden;
+    -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
 }
 
 .role {
     display: inline-block;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     white-space: nowrap;
     font-size: var(--font-size);
@@ -78,6 +104,8 @@
 
 @media (min-width: 1280px) {
     .card:hover .selectTag {
+        -webkit-transition: var(--transition);
+        -o-transition: var(--transition);
         transition: var(--transition);
         opacity: 1;
     }
@@ -91,6 +119,8 @@
         padding: calc(var(--spacing-sm));
     }
     .selectedCard {
+        -webkit-transform: scale(1.03);
+        -ms-transform: scale(1.03);
         transform: scale(1.03);
         border: 1px solid var(--accent-blue);
     }
@@ -109,6 +139,7 @@
     .cardInfo {
         width: 100%;
         height: 100%;
+        -ms-flex-pack: distribute;
         justify-content: space-around;
     }
     .card {
@@ -118,9 +149,6 @@
     .cardImg {
         width: 64px;
     }
-    /* .name span {
-        display: inline;
-    } */
 }
 
 @media (max-width: 768px) {

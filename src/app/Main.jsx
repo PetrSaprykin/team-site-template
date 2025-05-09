@@ -19,11 +19,11 @@ export default function Main() {
 
   const [selectedMember, setSelectedMember] = createSignal(null)
 
-  let mainBlock
+  let mainSection, mainBlock
 
   const handleSelect = (member) => {
     setSelectedMember(member)
-    mainBlock.classList.add(styles.mobileOpened)
+    ;(mainBlock, mainSection).classList.add(styles.mobileOpened)
   }
 
   const backButtonClick = () => {
@@ -33,7 +33,7 @@ export default function Main() {
 
   return (
     <>
-      <section class={styles.mainSection}>
+      <section class={styles.mainSection} ref={mainSection}>
         <h1 class={styles.mainSectionTitle}>{`Команда ${settings.team.name}`}</h1>
         <div class={styles.mainBlock} ref={mainBlock}>
           <Show when={!isMobileLayout() || !selectedMember()}>
