@@ -60,6 +60,12 @@ export default function Main() {
         <h4>
           &copy; {window.location.hostname} {new Date().getFullYear()}
         </h4>
+        <h4 class={styles.authorInfo}>
+          . Template by{' '}
+          <a href="https://github.com/PetrSaprykin" target="blank">
+            Petr Saprykin
+          </a>{' '}
+        </h4>
       </footer>
     </>
   )

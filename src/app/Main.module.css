@@ -89,6 +89,14 @@ footer h4 {
     text-transform: uppercase;
 }
 
+.authorInfo {
+    text-transform: none;
+}
+.authorInfo a {
+    font-size: inherit;
+    color: var(--accent-blue);
+}
+
 @media (max-width: 1595px) {
     .mainBlock {
         max-height: 550px;
