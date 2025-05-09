@@ -19,7 +19,7 @@ export default function MemberCard(props) {
       </span>
       <div class={styles.cardImg}>
         <Show when={props.member?.image} fallback={<div class={styles.placeholder}>Нет фото</div>}>
-          <img src={props.member.image} alt={`Фото ${props.member.name[0]}`} loading="lazy" />
+          <img src={props.member.image} alt={`Фото ${props.member.name[1]}`} loading="lazy" />
         </Show>
       </div>
       <div class={styles.cardInfo}>

@@ -1,8 +1,9 @@
 {
-  "name": "vite-template-solid",
+  "name": "devs-team-website",
   "version": "0.0.0",
-  "description": "",
+  "description": "Template for website for 5 developers team",
   "type": "module",
+  "author": "Petr Saprykin",
   "scripts": {
     "start": "vite",
     "dev": "vite",

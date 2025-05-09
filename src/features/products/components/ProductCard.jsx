@@ -58,7 +58,7 @@ export default function ProductCard(props) {
             return (
               <div class={styles.member} member-id={id} onClick={() => showMemberInfo(member)}>
                 <div class={styles.avatar}>
-                  <img src={member?.image} alt={member?.name[0]} />
+                  <img src={member?.image} alt={`Фото ${member?.name[1]}`} />
                 </div>
                 <div class={styles.memberInfo}>
                   <span class={styles.memberName}>
