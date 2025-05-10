@@ -1,7 +1,7 @@
 import './../shared/styles/global.css'
 
 import { createMediaQuery } from '@solid-primitives/media'
-import { createSignal, Show, onMount, createEffect } from 'solid-js'
+import { createSignal, Show } from 'solid-js'
 
 import settings from '/settings.json' with { type: 'json' }
 
