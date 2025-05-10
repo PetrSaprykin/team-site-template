@@ -22,7 +22,7 @@
 Скачайте исходный код проекта в ZIP-архиве или клонируйте репозиторий:
 
 ```bash
-git clone https://github.com/PetrSaprykin/team-site-template
+git clone https://github.com/PetrSaprykin/team-site-template.git
 ```
 
 ### 2. Подготовка медиа-ресурсов
