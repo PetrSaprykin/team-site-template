@@ -11,7 +11,8 @@ import DescriptionBlock from './components/DescriptionBlock/DescriptionBlock'
 import SkillsBlock from './components/SkillsBlock/SkillsBlock'
 
 export default function AboutBlock(props) {
-  const hasWebSite = () => props?.member?.contacts?.site
+  const webSite = props?.member?.contacts?.site
+  const hasWebSite = () => webSite && webSite !== 'null'
 
   const isTablet = createMediaQuery('(max-width: 960px) and (min-width: 570px)')
   const isMobile = createMediaQuery('(max-width: 570px)')
