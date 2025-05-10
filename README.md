@@ -1,34 +1,25 @@
-## Usage
+# О проекте
+Этот проект - темплейт для сайта команды разработчиков из 5 человек. На представлены 5 интерактивных карточек каждого участника,  а так же список совместных проектов команды.
 
-Those templates dependencies are maintained via [pnpm](https://pnpm.io) via `pnpm up -Lri`.
+**Стек**
+Сайт написан на фреймворке SolidJS, использованием CSS-модулей, ESLint и Prettier, cобран проект на сборщике Vite, так же используется слайдер из библиотеки Splide.js. Структура проекта - feature-based.
 
-This is the reason you see a `pnpm-lock.yaml`. That being said, any package manager will work. This file can be safely be removed once you clone a template.
+## Настройка и использование
 
-```bash
-$ npm install # or pnpm install or yarn install
-```
+Для использования данного темплейта для создания сайта вашей команды вам потребуется выполнить следующие шаги:
 
-### Learn more on the [Solid Website](https://solidjs.com) and come chat with us on our [Discord](https://discord.com/invite/solidjs)
+ - скачайте исходный код проекта в zip-архив или склонируйте репозиторий
+ - загрузите фотографии кажого участника в папку `images/membersPhotos`, настоятельно рекомендуется загружать изображения в формате WebP, размером 600х600 пикселей, весом не более 100-120кб. Вы можете использовать онлайн-конвертеры для преобразования ваших фото в WebP.
+ - загрузите логотипы проектов в папку `images/productIcons`, рекомендуется использовать изображения формата WebP или SVG, размером 128x128 пикселей и весом не более 10-12кб 
+ - загрузите favicon'ы для вашего сайта в папку `image/favicons`, используйте сайт  https://realfavicongenerator.net/
+ - отредактируйте файл settings.js (находится в корне проекта) в соответствии с данными участников: вам нужно будет ввести название команды, приветственный текст, заполнить информацию о каждом участнике (вы можете не указывать некоторые контактные данные, например, телефон, введя `null` вместо значения поля: `"phone": null`), а так же прописать пути к фото конкретного участника. После добавьте информацию о ваших проектах (название, краткое описание, логотип, ссылку на проект, список участников используя id). Все пояснения к заполнению есть в самом файле.
+ - найдите и откройте файл index.html и впишите заголовок сайта в тег `title`, а так же ключевые слова и описание сайта в `meta`-теги, это необходимо для SEO-оптимизации
+ - установите все нужные зависимости введя команду `npm install` в терминал
+ - запустите режим отладки, введя команду npm run dev и в браузере перейдите по адресу `localhost:3000` (подсказка появится в терминале), чтобы протестировать получившийся сайт
+ - после тестирования соберите проект, используя команду `npm run build`
+ - после сборки в каталоге проекта появится папка dist, содержимое которого вам необходимо загрузить на ваш хостинг
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm run dev` or `npm start`
-
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br>
-
-### `npm run build`
-
-Builds the app for production to the `dist` folder.<br>
-It correctly bundles Solid in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-## Deployment
-
-You can deploy the `dist` folder to any static host provider (netlify, surge, now, etc.)
+## Лицензия
+**Лицензия - MIT**
+Указание авторства привествуется, но необязательно, вы можете убрать указание авторства из футера страницы, отредактировав файл `Main.jsx` по пути `src/app/Main.jsx`
+ 
